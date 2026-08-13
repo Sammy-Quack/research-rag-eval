@@ -1,0 +1,3 @@
+id,title,source,pdf_url,license,notes
+agentq_2024,Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents,arxiv,https://arxiv.org/pdf/2408.07199,arXiv non-exclusive,MCTS + DPO web agent training
+hf_autonomy_2025,Fully Autonomous AI Agents Should Not Be Developed,arxiv,https://arxiv.org/pdf/2502.02649,arXiv non-exclusive,Policy/ethics position paper on agent autonomy risk

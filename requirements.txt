@@ -1,0 +1,11 @@
+pymupdf
+unstructured
+sentence-transformers
+chromadb
+rank_bm25
+ragas
+langchain-text-splitters
+streamlit
+requests
+python-dotenv
+pytest
