@@ -10,6 +10,7 @@ Usage:
 
 import argparse
 import csv
+import os
 import time
 from pathlib import Path
 
@@ -18,12 +19,43 @@ import requests
 API_URL = "https://api.semanticscholar.org/graph/v1/paper/search"
 FIELDS = "title,year,externalIds,openAccessPdf,venue"
 PAGE_SIZE = 100
-REQUEST_DELAY_SECONDS = 1.1  # be polite to the unauthenticated rate limit
+REQUEST_DELAY_SECONDS = 3  # be polite to the unauthenticated rate limit
+MAX_RETRIES = 6
+INITIAL_BACKOFF_SECONDS = 10
 MANIFEST_COLUMNS = ["id", "title", "source", "pdf_url", "license", "notes"]
+
+# Optional: a free key (https://www.semanticscholar.org/product/api#api-key) raises
+# the shared unauthenticated rate limit a lot. Not required, just makes 429s rarer.
+API_KEY = os.environ.get("SEMANTIC_SCHOLAR_API_KEY")
 
 
 def slugify(paper_id: str) -> str:
     return paper_id.replace("/", "_").replace(":", "_")
+
+
+def _get_with_retry(params: dict) -> dict:
+    """GET with exponential backoff on 429 — the unauthenticated S2 pool is shared
+    globally and rate-limits even single, isolated requests fairly often."""
+    headers = {"x-api-key": API_KEY} if API_KEY else {}
+    backoff = INITIAL_BACKOFF_SECONDS
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        response = requests.get(API_URL, params=params, headers=headers, timeout=30)
+
+        if response.status_code == 429:
+            wait = int(response.headers.get("Retry-After", backoff))
+            print(f"  rate limited (429) — waiting {wait}s, retry {attempt}/{MAX_RETRIES}")
+            time.sleep(wait)
+            backoff *= 2
+            continue
+
+        response.raise_for_status()
+        return response.json()
+
+    raise RuntimeError(
+        "Still rate-limited after all retries. Get a free API key and set it as "
+        "the SEMANTIC_SCHOLAR_API_KEY env var: https://www.semanticscholar.org/product/api#api-key"
+    )
 
 
 def fetch_open_access_papers(query: str, limit: int) -> list[dict]:
@@ -37,9 +69,7 @@ def fetch_open_access_papers(query: str, limit: int) -> list[dict]:
             "limit": min(PAGE_SIZE, limit - len(results)),
             "offset": offset,
         }
-        response = requests.get(API_URL, params=params, timeout=30)
-        response.raise_for_status()
-        payload = response.json()
+        payload = _get_with_retry(params)
         papers = payload.get("data", [])
 
         if not papers:
