@@ -69,7 +69,14 @@ def fetch_open_access_papers(query: str, limit: int) -> list[dict]:
             "limit": min(PAGE_SIZE, limit - len(results)),
             "offset": offset,
         }
-        payload = _get_with_retry(params)
+        try:
+            payload = _get_with_retry(params)
+        except requests.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 400 and offset >= 900:
+                print(f"  hit Semantic Scholar's pagination cap (max offset ~1000) "
+                      f"— stopping with {len(results)} open-access papers collected")
+                break
+            raise
         papers = payload.get("data", [])
 
         if not papers:
