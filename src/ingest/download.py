@@ -37,6 +37,14 @@ def download_pdf(url: str, dest_path: Path, force: bool = False) -> bool:
             with open(tmp_path, "wb") as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
+
+            if tmp_path.stat().st_size == 0:
+                print(f"  [attempt {attempt}/{RETRY_ATTEMPTS}] got 200 OK but 0 bytes for {url}")
+                tmp_path.unlink()
+                if attempt < RETRY_ATTEMPTS:
+                    time.sleep(RETRY_BACKOFF_SECONDS * attempt)
+                continue
+
             tmp_path.rename(dest_path)
             return True
 

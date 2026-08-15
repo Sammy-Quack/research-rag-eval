@@ -84,7 +84,11 @@ def fetch_open_access_papers(query: str, limit: int) -> list[dict]:
 
         for paper in papers:
             oa = paper.get("openAccessPdf")
-            if oa and oa.get("url"):
+            arxiv_id = (paper.get("externalIds") or {}).get("ArXiv")
+            # arXiv-only: publisher-hosted "open access" PDFs (ScienceDirect, MDPI,
+            # Wiley, ACM, etc.) are frequently bot-blocked at download time even
+            # though they're legally open access. arXiv PDFs download reliably.
+            if oa and oa.get("url") and arxiv_id:
                 results.append(paper)
 
         offset += PAGE_SIZE
@@ -120,12 +124,23 @@ def append_to_manifest(papers: list[dict], manifest_path: Path) -> int:
             if paper_id in existing_ids:
                 continue
 
+            # Always prefer a direct arxiv.org URL over S2's openAccessPdf.url —
+            # S2 sometimes resolves "open access" to a publisher mirror (ACM,
+            # ScienceDirect, etc.) that's legally open but blocks scripted downloads,
+            # even when the same paper is also on arXiv.
+            if arxiv_id:
+                pdf_url = f"https://arxiv.org/pdf/{arxiv_id}"
+                license_note = "arXiv non-exclusive"
+            else:
+                pdf_url = paper["openAccessPdf"]["url"]
+                license_note = paper["openAccessPdf"].get("license", "unknown")
+
             writer.writerow({
                 "id": paper_id,
                 "title": paper.get("title", "").strip(),
                 "source": "arxiv" if arxiv_id else "semantic_scholar_oa",
-                "pdf_url": paper["openAccessPdf"]["url"],
-                "license": paper["openAccessPdf"].get("license", "unknown"),
+                "pdf_url": pdf_url,
+                "license": license_note,
                 "notes": paper.get("venue", ""),
             })
             existing_ids.add(paper_id)
