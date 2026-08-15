@@ -6,3 +6,5 @@ data/raw/
 chroma_db/
 .DS_Store
 data/processed/
+
+data/chunks/

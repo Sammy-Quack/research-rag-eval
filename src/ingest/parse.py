@@ -11,8 +11,13 @@ from typing import TypedDict
 
 import fitz  # PyMuPDF
 
-from src.ingest.clean import clean_text, looks_like_multi_column_artifact
-
+from src.ingest.clean import (
+    clean_text,
+    collapse_whitespace,
+    dehyphenate,
+    looks_like_multi_column_artifact,
+    strip_back_matter,
+)
 
 class ParsedPaper(TypedDict):
     paper_id: str
@@ -39,6 +44,11 @@ def parse_pdf(pdf_path: Path, paper_id: str) -> ParsedPaper:
         warnings.append("possible_multi_column_scramble")
 
     cleaned = clean_text(raw_text)
+
+    before_len = len(cleaned)
+    cleaned = strip_back_matter(cleaned)
+    if len(cleaned) == before_len:
+        warnings.append("no_references_header_found")
 
     return ParsedPaper(
         paper_id=paper_id,
