@@ -145,8 +145,11 @@ def test_section_aware_large_section_gets_subsplit_but_keeps_section_tag():
 # ---------- cross-strategy ----------
 
 def test_chunk_ids_are_unique_within_each_strategy():
-    for chunk_fn in (chunk_fixed_size, chunk_sentence_based):
-        text = " ".join(f"word{i}" for i in range(200))
-        chunks = chunk_fn(text, "p1", chunk_size_words=30)
+    text = " ".join(f"word{i}" for i in range(200))
+
+    fixed_chunks = chunk_fixed_size(text, "p1", chunk_size_words=30, overlap_words=5)
+    sentence_chunks = chunk_sentence_based(text, "p1", chunk_size_words=30)
+
+    for chunks in (fixed_chunks, sentence_chunks):
         ids = [c["chunk_id"] for c in chunks]
         assert len(ids) == len(set(ids))
