@@ -8,3 +8,4 @@ chroma_db/
 data/processed/
 
 data/chunks/
+temp*
