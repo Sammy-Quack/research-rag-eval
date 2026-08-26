@@ -10,35 +10,49 @@ measure whether their own design choice (chunking, embedding, retrieval
 method) actually improve answer quality — most ship one config and call
 it done.
 
-This project builds RAG system over curated autonomous-agents paper
-corpus (open-access only: arXiv, OpenReview, ACL Anthology) AND
-empirically measures which pipeline design choices matter, via
-controlled ablation with Ragas metrics.
+This project builds a RAG system over a curated autonomous-agents paper
+corpus (open-access only: arXiv) AND empirically measures which pipeline
+design choices matter, via controlled ablation with Ragas metrics.
 
 ## Summary — How It Solves The Problem
 
-1. **Ingestion**: pull open-access PDFs (arXiv/OpenReview/ACL), parse,
-   clean.
+1. **Ingestion**: pull open-access PDFs (arXiv), parse, clean, strip
+   references/back-matter before chunking.
 2. **Chunking**: 3 strategies implemented as swappable modules — fixed
    size, sentence-based, section-aware. Compared, not guessed.
-3. **Embedding + Index**: BGE-M3 (open-source) + one alt (OpenAI/Qwen3)
-   into Chroma; parallel BM25 sparse index for hybrid retrieval test.
-4. **Retrieval + Generation**: dense/hybrid/reranked retrieval, grounded
-   prompt with citations, explicit "no answer in context" handling —
-   no silent hallucination.
-5. **Evaluation**: hand-verified Q&A eval set (not blind LLM-generated),
-   Ragas faithfulness / answer relevancy / context precision / recall,
-   plus no-retrieval baseline as control. Cost + latency tracked per
-   config.
-6. **Result**: ablation table, not vibes — proves which choices actually
-   move the needle, with numbers.
+3. **Embedding + Index**: BGE-M3 (open-source, self-hosted) into
+   ChromaDB, alongside a parallel BM25 sparse index.
+4. **Retrieval**: dense (Chroma), sparse (BM25), and hybrid
+   (Reciprocal Rank Fusion) — all three implemented, all three queryable.
+5. **Generation**: grounded prompt with numbered citations, LLM answers
+   via Groq (Qwen3.6-27B), explicit "insufficient information" handling
+   instead of silent hallucination.
+6. **Evaluation**: hand-verified Q&A eval set — 70 questions, drafted by
+   an LLM then manually reviewed one at a time, 1.4% observed error rate
+   after review (1 of 70 needed correction). Ragas scoring across
+   pipeline configs is next.
 
-Status: scaffold stage. Build plan in `docs/roadmap.md`.
+## Status
+
+**Phases 0–5a complete.** Ingestion, all 3 chunking strategies, BGE-M3
+embedding + Chroma indexing, dense/BM25/hybrid retrieval, grounded
+generation, and a manually verified 70-question evaluation set are all
+built and tested end-to-end.
+
+**Next**: Phase 5b — wire up Ragas (faithfulness, answer relevancy,
+context precision/recall) and run the actual ablation matrix across
+chunking strategy × retrieval mode, including a no-retrieval baseline as
+a control. Then Phase 6 (Streamlit demo) and Phase 7 (final write-up
+with real results).
+
+Full build plan: `docs/roadmap.md`.
 
 ## Stack
 
-Python 3.11+, BGE-M3, Chroma, rank_bm25, Ragas, Streamlit, GitHub
-Actions CI.
+**In use**: Python 3.11+, PyMuPDF, ChromaDB, sentence-transformers
+(BGE-M3), rank_bm25, Groq API (Qwen3.6-27B), pytest, GitHub Actions CI.
+
+**Planned, not yet wired in**: Ragas (Phase 5b), Streamlit (Phase 6).
 
 ## Setup
 
@@ -50,4 +64,3 @@ pip install -r requirements.txt
 ## License
 
 MIT — see `LICENSE`.
-WIP
