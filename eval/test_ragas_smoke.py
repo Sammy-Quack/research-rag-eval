@@ -14,7 +14,7 @@ Usage:
 
 import asyncio
 
-from . import _ragas_compat  # noqa: F401 -- must import before ragas, see that file
+from eval import _ragas_compat  # noqa: F401 -- must import before ragas, see that file
 from ragas.dataset_schema import SingleTurnSample
 from ragas.metrics import Faithfulness
 
