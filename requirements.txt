@@ -3,7 +3,7 @@ unstructured
 sentence-transformers
 chromadb
 rank_bm25
-ragas
+ragas<0.4
 langchain-text-splitters
 streamlit
 requests
