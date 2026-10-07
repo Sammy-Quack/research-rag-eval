@@ -1,0 +1,825 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "file": "section_aware__hybrid__llama3_2_3b_8k.json",
+    "samples": 70
+  },
+  "summary": {
+    "metrics": {
+      "faithfulness": 0.858418,
+      "context_precision": 0.879762,
+      "context_recall": 0.985714,
+      "response_relevancy": 0.78243
+    },
+    "performance": {
+      "avg_latency_seconds": 26.415,
+      "median_latency_seconds": 24.75,
+      "p95_latency_seconds": 36.8132,
+      "avg_prompt_tokens": 2978.91,
+      "avg_completion_tokens": 140.63,
+      "avg_total_tokens": 3119.54
+    },
+    "diagnosis": {
+      "strongest_metric": "context_recall",
+      "weakest_metric": "response_relevancy",
+      "metric_ranges": {
+        "faithfulness": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.858418,
+          "median": 1.0
+        },
+        "context_precision": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.879762,
+          "median": 1.0
+        },
+        "context_recall": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.985714,
+          "median": 1.0
+        },
+        "response_relevancy": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.78243,
+          "median": 0.906884
+        }
+      }
+    }
+  },
+  "per_eval": [
+    {
+      "id": "eval_0001",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0,
+        "response_relevancy": 0.7266
+      },
+      "latency_seconds": 24.437,
+      "total_tokens": 3065
+    },
+    {
+      "id": "eval_0002",
+      "scores": {
+        "faithfulness": 0.625,
+        "context_precision": 0.583333,
+        "context_recall": 1.0,
+        "response_relevancy": 0.935691
+      },
+      "latency_seconds": 31.672,
+      "total_tokens": 3413
+    },
+    {
+      "id": "eval_0003",
+      "scores": {
+        "faithfulness": 0.666667,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 22.797,
+      "total_tokens": 3115
+    },
+    {
+      "id": "eval_0004",
+      "scores": {
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "response_relevancy": 0.852282
+      },
+      "latency_seconds": 23.61,
+      "total_tokens": 3548
+    },
+    {
+      "id": "eval_0005",
+      "scores": {
+        "faithfulness": 0.857143,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 26.203,
+      "total_tokens": 3447
+    },
+    {
+      "id": "eval_0006",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.584384
+      },
+      "latency_seconds": 29.594,
+      "total_tokens": 2954
+    },
+    {
+      "id": "eval_0007",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.89158
+      },
+      "latency_seconds": 28.312,
+      "total_tokens": 2925
+    },
+    {
+      "id": "eval_0008",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.996645
+      },
+      "latency_seconds": 35.5,
+      "total_tokens": 3236
+    },
+    {
+      "id": "eval_0009",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.779292
+      },
+      "latency_seconds": 23.469,
+      "total_tokens": 3580
+    },
+    {
+      "id": "eval_0010",
+      "scores": {
+        "faithfulness": 0.666667,
+        "context_precision": 0.8875,
+        "context_recall": 1.0,
+        "response_relevancy": 0.865701
+      },
+      "latency_seconds": 22.188,
+      "total_tokens": 3320
+    },
+    {
+      "id": "eval_0011",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.333333,
+        "context_recall": 1.0,
+        "response_relevancy": 0.906387
+      },
+      "latency_seconds": 21.594,
+      "total_tokens": 3175
+    },
+    {
+      "id": "eval_0012",
+      "scores": {
+        "faithfulness": 0.6,
+        "context_precision": 0.75,
+        "context_recall": 1.0,
+        "response_relevancy": 0.990376
+      },
+      "latency_seconds": 23.704,
+      "total_tokens": 3320
+    },
+    {
+      "id": "eval_0013",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.856888
+      },
+      "latency_seconds": 23.547,
+      "total_tokens": 2767
+    },
+    {
+      "id": "eval_0014",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.938076
+      },
+      "latency_seconds": 21.188,
+      "total_tokens": 2778
+    },
+    {
+      "id": "eval_0015",
+      "scores": {
+        "faithfulness": 0.666667,
+        "context_precision": 0.7,
+        "context_recall": 1.0,
+        "response_relevancy": 0.984085
+      },
+      "latency_seconds": 21.5,
+      "total_tokens": 2274
+    },
+    {
+      "id": "eval_0016",
+      "scores": {
+        "faithfulness": 0.555556,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.705341
+      },
+      "latency_seconds": 27.703,
+      "total_tokens": 3092
+    },
+    {
+      "id": "eval_0017",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.833333,
+        "context_recall": 1.0,
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 33.485,
+      "total_tokens": 3111
+    },
+    {
+      "id": "eval_0018",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.75,
+        "context_recall": 1.0,
+        "response_relevancy": 0.672281
+      },
+      "latency_seconds": 19.125,
+      "total_tokens": 3934
+    },
+    {
+      "id": "eval_0019",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.920012
+      },
+      "latency_seconds": 36.547,
+      "total_tokens": 3476
+    },
+    {
+      "id": "eval_0020",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.804167,
+        "context_recall": 1.0,
+        "response_relevancy": 0.960953
+      },
+      "latency_seconds": 22.813,
+      "total_tokens": 2891
+    },
+    {
+      "id": "eval_0021",
+      "scores": {
+        "faithfulness": 0.777778,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.945534
+      },
+      "latency_seconds": 34.672,
+      "total_tokens": 3777
+    },
+    {
+      "id": "eval_0022",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.833333,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.531,
+      "total_tokens": 3233
+    },
+    {
+      "id": "eval_0023",
+      "scores": {
+        "faithfulness": 0.714286,
+        "context_precision": 0.333333,
+        "context_recall": 1.0,
+        "response_relevancy": 0.997319
+      },
+      "latency_seconds": 24.609,
+      "total_tokens": 3316
+    },
+    {
+      "id": "eval_0024",
+      "scores": {
+        "faithfulness": 0.666667,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.740299
+      },
+      "latency_seconds": 20.985,
+      "total_tokens": 2869
+    },
+    {
+      "id": "eval_0025",
+      "scores": {
+        "faithfulness": 0.285714,
+        "context_precision": 0.583333,
+        "context_recall": 1.0,
+        "response_relevancy": 0.834919
+      },
+      "latency_seconds": 27.969,
+      "total_tokens": 3334
+    },
+    {
+      "id": "eval_0026",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 22.219,
+      "total_tokens": 3094
+    },
+    {
+      "id": "eval_0027",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.95,
+        "context_recall": 1.0,
+        "response_relevancy": 0.992346
+      },
+      "latency_seconds": 25.547,
+      "total_tokens": 2799
+    },
+    {
+      "id": "eval_0028",
+      "scores": {
+        "faithfulness": 0.833333,
+        "context_precision": 0.45,
+        "context_recall": 1.0,
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 21.672,
+      "total_tokens": 2943
+    },
+    {
+      "id": "eval_0029",
+      "scores": {
+        "faithfulness": 0.75,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 24.61,
+      "total_tokens": 3317
+    },
+    {
+      "id": "eval_0030",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.782284
+      },
+      "latency_seconds": 27.453,
+      "total_tokens": 3098
+    },
+    {
+      "id": "eval_0031",
+      "scores": {
+        "faithfulness": 0.857143,
+        "context_precision": 0.75,
+        "context_recall": 1.0,
+        "response_relevancy": 0.903803
+      },
+      "latency_seconds": 24.89,
+      "total_tokens": 3297
+    },
+    {
+      "id": "eval_0032",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.89789
+      },
+      "latency_seconds": 24.969,
+      "total_tokens": 2860
+    },
+    {
+      "id": "eval_0033",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.996036
+      },
+      "latency_seconds": 37.031,
+      "total_tokens": 2935
+    },
+    {
+      "id": "eval_0034",
+      "scores": {
+        "faithfulness": 0.888889,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.972624
+      },
+      "latency_seconds": 27.407,
+      "total_tokens": 3197
+    },
+    {
+      "id": "eval_0035",
+      "scores": {
+        "faithfulness": 0.571429,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 32.36,
+      "total_tokens": 3256
+    },
+    {
+      "id": "eval_0036",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.95,
+        "context_recall": 1.0,
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 33.047,
+      "total_tokens": 3300
+    },
+    {
+      "id": "eval_0037",
+      "scores": {
+        "faithfulness": 0.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.927328
+      },
+      "latency_seconds": 25.031,
+      "total_tokens": 3272
+    },
+    {
+      "id": "eval_0038",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.805556,
+        "context_recall": 1.0,
+        "response_relevancy": 0.921092
+      },
+      "latency_seconds": 29.984,
+      "total_tokens": 2990
+    },
+    {
+      "id": "eval_0039",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.972377
+      },
+      "latency_seconds": 32.125,
+      "total_tokens": 2984
+    },
+    {
+      "id": "eval_0040",
+      "scores": {
+        "faithfulness": 0.666667,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.948388
+      },
+      "latency_seconds": 21.797,
+      "total_tokens": 2339
+    },
+    {
+      "id": "eval_0041",
+      "scores": {
+        "faithfulness": 0.818182,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.954596
+      },
+      "latency_seconds": 32.187,
+      "total_tokens": 2950
+    },
+    {
+      "id": "eval_0042",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.8875,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 38.844,
+      "total_tokens": 2728
+    },
+    {
+      "id": "eval_0043",
+      "scores": {
+        "faithfulness": 0.666667,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.915152
+      },
+      "latency_seconds": 27.391,
+      "total_tokens": 3015
+    },
+    {
+      "id": "eval_0044",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.899215
+      },
+      "latency_seconds": 35.062,
+      "total_tokens": 2967
+    },
+    {
+      "id": "eval_0045",
+      "scores": {
+        "faithfulness": 0.8,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.994925
+      },
+      "latency_seconds": 30.109,
+      "total_tokens": 3116
+    },
+    {
+      "id": "eval_0046",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 21.75,
+      "total_tokens": 3379
+    },
+    {
+      "id": "eval_0047",
+      "scores": {
+        "faithfulness": 0.909091,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.90949
+      },
+      "latency_seconds": 35.094,
+      "total_tokens": 3512
+    },
+    {
+      "id": "eval_0048",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.888165
+      },
+      "latency_seconds": 23.328,
+      "total_tokens": 3575
+    },
+    {
+      "id": "eval_0049",
+      "scores": {
+        "faithfulness": 0.714286,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.935527
+      },
+      "latency_seconds": 21.171,
+      "total_tokens": 2206
+    },
+    {
+      "id": "eval_0050",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.583333,
+        "context_recall": 1.0,
+        "response_relevancy": 0.950169
+      },
+      "latency_seconds": 24.062,
+      "total_tokens": 3174
+    },
+    {
+      "id": "eval_0051",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.92135
+      },
+      "latency_seconds": 30.187,
+      "total_tokens": 3305
+    },
+    {
+      "id": "eval_0052",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.907381
+      },
+      "latency_seconds": 23.734,
+      "total_tokens": 3381
+    },
+    {
+      "id": "eval_0053",
+      "scores": {
+        "faithfulness": 0.8,
+        "context_precision": 0.95,
+        "context_recall": 1.0,
+        "response_relevancy": 0.998748
+      },
+      "latency_seconds": 42.641,
+      "total_tokens": 2667
+    },
+    {
+      "id": "eval_0054",
+      "scores": {
+        "faithfulness": 0.923077,
+        "context_precision": 0.8875,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 27.25,
+      "total_tokens": 3052
+    },
+    {
+      "id": "eval_0055",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.75,
+        "context_recall": 1.0,
+        "response_relevancy": 0.888555
+      },
+      "latency_seconds": 18.969,
+      "total_tokens": 3093
+    },
+    {
+      "id": "eval_0056",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.726173
+      },
+      "latency_seconds": 19.859,
+      "total_tokens": 3133
+    },
+    {
+      "id": "eval_0057",
+      "scores": {
+        "faithfulness": 0.5,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.7744
+      },
+      "latency_seconds": 17.687,
+      "total_tokens": 3002
+    },
+    {
+      "id": "eval_0058",
+      "scores": {
+        "faithfulness": 0.833333,
+        "context_precision": 0.805556,
+        "context_recall": 1.0,
+        "response_relevancy": 0.733331
+      },
+      "latency_seconds": 21.859,
+      "total_tokens": 3495
+    },
+    {
+      "id": "eval_0059",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.5,
+        "context_recall": 1.0,
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 22.422,
+      "total_tokens": 3408
+    },
+    {
+      "id": "eval_0060",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.916667,
+        "context_recall": 1.0,
+        "response_relevancy": 0.990593
+      },
+      "latency_seconds": 20.515,
+      "total_tokens": 2927
+    },
+    {
+      "id": "eval_0061",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.755132
+      },
+      "latency_seconds": 21.578,
+      "total_tokens": 3267
+    },
+    {
+      "id": "eval_0062",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.984516
+      },
+      "latency_seconds": 22.703,
+      "total_tokens": 2837
+    },
+    {
+      "id": "eval_0063",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.952807
+      },
+      "latency_seconds": 20.422,
+      "total_tokens": 2659
+    },
+    {
+      "id": "eval_0064",
+      "scores": {
+        "faithfulness": 0.875,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.893006
+      },
+      "latency_seconds": 27.282,
+      "total_tokens": 3260
+    },
+    {
+      "id": "eval_0065",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.996929
+      },
+      "latency_seconds": 19.657,
+      "total_tokens": 3553
+    },
+    {
+      "id": "eval_0066",
+      "scores": {
+        "faithfulness": 0.6,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.884245
+      },
+      "latency_seconds": 26.031,
+      "total_tokens": 3121
+    },
+    {
+      "id": "eval_0067",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 0.755556,
+        "context_recall": 1.0,
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 26.234,
+      "total_tokens": 3253
+    },
+    {
+      "id": "eval_0068",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.990041
+      },
+      "latency_seconds": 27.094,
+      "total_tokens": 2687
+    },
+    {
+      "id": "eval_0069",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.775152
+      },
+      "latency_seconds": 21.969,
+      "total_tokens": 3546
+    },
+    {
+      "id": "eval_0070",
+      "scores": {
+        "faithfulness": 1.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "response_relevancy": 0.751691
+      },
+      "latency_seconds": 44.063,
+      "total_tokens": 2469
+    }
+  ]
+}

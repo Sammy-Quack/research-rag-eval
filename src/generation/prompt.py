@@ -13,6 +13,15 @@ SYSTEM_PROMPT = (
     "say so explicitly instead of guessing or using outside knowledge."
 )
 
+# Used only for the no-retrieval baseline (--mode none): no excerpts exist to
+# cite, so the model answers from its own parametric knowledge instead. This
+# is the control condition -- comparing this against the retrieval-backed
+# modes is what actually proves RAG adds value over the raw model.
+BASELINE_SYSTEM_PROMPT = (
+    "Answer the following question directly, using your own knowledge. "
+    "You have not been given any external documents or context for this question."
+)
+
 
 def build_prompt(query: str, chunks: list[dict]) -> str:
     excerpts = "\n\n".join(

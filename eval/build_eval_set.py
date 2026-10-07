@@ -12,10 +12,9 @@ Usage:
 import argparse
 import json
 import re
-import time
 from pathlib import Path
 
-from src.generation.groq_llm import GroqLLM
+from src.generation.ollama_llm import OllamaLLM
 
 CHUNKS_DIR = Path("data/chunks")
 OUTPUT_PATH = Path("eval/eval_set.jsonl")
@@ -97,25 +96,6 @@ def parse_json_response(text: str) -> dict | None:
     return None
 
 
-def generate_with_retry(llm: GroqLLM, system_prompt: str, user_prompt: str, max_retries: int = 4) -> str:
-    """Basic rate-limit retry -- ~70 sequential free-tier calls is exactly
-    the scale where Groq's free tier can start throttling, same lesson
-    learned from Semantic Scholar earlier in this project.
-    """
-    for attempt in range(1, max_retries + 1):
-        try:
-            return llm.generate(system_prompt, user_prompt)
-        except Exception as exc:
-            message = str(exc).lower()
-            if "rate" in message or "429" in message:
-                wait = 15 * attempt
-                print(f"    rate limited, waiting {wait}s (attempt {attempt}/{max_retries})")
-                time.sleep(wait)
-                continue
-            raise
-    raise RuntimeError("Still rate-limited after all retries.")
-
-
 def load_chunks(strategy: str) -> list[dict]:
     path = CHUNKS_DIR / f"{strategy}.jsonl"
     if not path.exists():
@@ -155,19 +135,14 @@ def build_eval_set(strategy: str, count: int) -> None:
     sampled = stratified_sample(chunks, remaining_needed)
     print(f"Sampled {len(sampled)} new chunks across {len({c['paper_id'] for c in sampled})} papers")
 
-    # Non-reasoning model for drafting -- much lighter token footprint per
-    # call than the reasoning model used for pipeline generation (no <think>
-    # deliberation), which means faster batch drafting and a lower chance of
-    # hitting a token-based rate limit across ~70 sequential calls. The
-    # reasoning model stays reserved for the actual pipeline being evaluated.
-    llm = GroqLLM(model="qwen/qwen3.6-27b")
+    llm = OllamaLLM(model="qwen2.5-14b-8k")
 
     candidates = existing
     failed = 0
 
     for i, chunk in enumerate(sampled, start=1):
         prompt = f"Excerpt:\n\n{chunk['text']}"
-        raw = generate_with_retry(llm, DRAFT_SYSTEM_PROMPT, prompt)
+        raw = llm.generate(DRAFT_SYSTEM_PROMPT, prompt)
         parsed = parse_json_response(raw)
 
         if parsed is None:

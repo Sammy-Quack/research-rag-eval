@@ -1,0 +1,594 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "file": "none__llama3_2_3b_8k.json",
+    "samples": 70
+  },
+  "summary": {
+    "metrics": {
+      "response_relevancy": 0.489032
+    },
+    "performance": {
+      "avg_latency_seconds": 37.8642,
+      "median_latency_seconds": 26.734,
+      "p95_latency_seconds": 89.1128,
+      "avg_prompt_tokens": 70.2,
+      "avg_completion_tokens": 310.57,
+      "avg_total_tokens": 380.77
+    },
+    "diagnosis": {
+      "strongest_metric": "response_relevancy",
+      "weakest_metric": "response_relevancy",
+      "metric_ranges": {
+        "response_relevancy": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.489032,
+          "median": 0.771874
+        }
+      }
+    }
+  },
+  "per_eval": [
+    {
+      "id": "eval_0001",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 12.281,
+      "total_tokens": 90
+    },
+    {
+      "id": "eval_0002",
+      "scores": {
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 28.375,
+      "total_tokens": 652
+    },
+    {
+      "id": "eval_0003",
+      "scores": {
+        "response_relevancy": 0.970511
+      },
+      "latency_seconds": 21.562,
+      "total_tokens": 431
+    },
+    {
+      "id": "eval_0004",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 14.125,
+      "total_tokens": 103
+    },
+    {
+      "id": "eval_0005",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 25.266,
+      "total_tokens": 488
+    },
+    {
+      "id": "eval_0006",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 13.859,
+      "total_tokens": 135
+    },
+    {
+      "id": "eval_0007",
+      "scores": {
+        "response_relevancy": 0.906282
+      },
+      "latency_seconds": 24.719,
+      "total_tokens": 479
+    },
+    {
+      "id": "eval_0008",
+      "scores": {
+        "response_relevancy": 0.910662
+      },
+      "latency_seconds": 25.297,
+      "total_tokens": 496
+    },
+    {
+      "id": "eval_0009",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 16.203,
+      "total_tokens": 142
+    },
+    {
+      "id": "eval_0010",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 18.719,
+      "total_tokens": 276
+    },
+    {
+      "id": "eval_0011",
+      "scores": {
+        "response_relevancy": 0.858458
+      },
+      "latency_seconds": 27.14,
+      "total_tokens": 608
+    },
+    {
+      "id": "eval_0012",
+      "scores": {
+        "response_relevancy": 0.990376
+      },
+      "latency_seconds": 19.781,
+      "total_tokens": 301
+    },
+    {
+      "id": "eval_0013",
+      "scores": {
+        "response_relevancy": 0.925424
+      },
+      "latency_seconds": 24.531,
+      "total_tokens": 515
+    },
+    {
+      "id": "eval_0014",
+      "scores": {
+        "response_relevancy": 0.952199
+      },
+      "latency_seconds": 27.953,
+      "total_tokens": 646
+    },
+    {
+      "id": "eval_0015",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 15.344,
+      "total_tokens": 121
+    },
+    {
+      "id": "eval_0016",
+      "scores": {
+        "response_relevancy": 0.97822
+      },
+      "latency_seconds": 24.937,
+      "total_tokens": 461
+    },
+    {
+      "id": "eval_0017",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.25,
+      "total_tokens": 293
+    },
+    {
+      "id": "eval_0018",
+      "scores": {
+        "response_relevancy": 0.806566
+      },
+      "latency_seconds": 17.687,
+      "total_tokens": 198
+    },
+    {
+      "id": "eval_0019",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 22.828,
+      "total_tokens": 409
+    },
+    {
+      "id": "eval_0020",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 14.922,
+      "total_tokens": 117
+    },
+    {
+      "id": "eval_0021",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.875,
+      "total_tokens": 351
+    },
+    {
+      "id": "eval_0022",
+      "scores": {
+        "response_relevancy": 0.996295
+      },
+      "latency_seconds": 30.266,
+      "total_tokens": 730
+    },
+    {
+      "id": "eval_0023",
+      "scores": {
+        "response_relevancy": 0.966262
+      },
+      "latency_seconds": 26.265,
+      "total_tokens": 572
+    },
+    {
+      "id": "eval_0024",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 15.594,
+      "total_tokens": 132
+    },
+    {
+      "id": "eval_0025",
+      "scores": {
+        "response_relevancy": 0.730452
+      },
+      "latency_seconds": 26.078,
+      "total_tokens": 584
+    },
+    {
+      "id": "eval_0026",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 15.75,
+      "total_tokens": 141
+    },
+    {
+      "id": "eval_0027",
+      "scores": {
+        "response_relevancy": 0.791736
+      },
+      "latency_seconds": 19.625,
+      "total_tokens": 301
+    },
+    {
+      "id": "eval_0028",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 26.328,
+      "total_tokens": 587
+    },
+    {
+      "id": "eval_0029",
+      "scores": {
+        "response_relevancy": 0.874606
+      },
+      "latency_seconds": 27.578,
+      "total_tokens": 634
+    },
+    {
+      "id": "eval_0030",
+      "scores": {
+        "response_relevancy": 0.899945
+      },
+      "latency_seconds": 27.688,
+      "total_tokens": 540
+    },
+    {
+      "id": "eval_0031",
+      "scores": {
+        "response_relevancy": 0.936243
+      },
+      "latency_seconds": 22.343,
+      "total_tokens": 414
+    },
+    {
+      "id": "eval_0032",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 24.594,
+      "total_tokens": 175
+    },
+    {
+      "id": "eval_0033",
+      "scores": {
+        "response_relevancy": 0.980699
+      },
+      "latency_seconds": 55.406,
+      "total_tokens": 487
+    },
+    {
+      "id": "eval_0034",
+      "scores": {
+        "response_relevancy": 0.865363
+      },
+      "latency_seconds": 52.469,
+      "total_tokens": 464
+    },
+    {
+      "id": "eval_0035",
+      "scores": {
+        "response_relevancy": 1.0
+      },
+      "latency_seconds": 66.234,
+      "total_tokens": 604
+    },
+    {
+      "id": "eval_0036",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 44.437,
+      "total_tokens": 383
+    },
+    {
+      "id": "eval_0037",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.813,
+      "total_tokens": 137
+    },
+    {
+      "id": "eval_0038",
+      "scores": {
+        "response_relevancy": 0.98267
+      },
+      "latency_seconds": 56.297,
+      "total_tokens": 495
+    },
+    {
+      "id": "eval_0039",
+      "scores": {
+        "response_relevancy": 0.938525
+      },
+      "latency_seconds": 55.125,
+      "total_tokens": 495
+    },
+    {
+      "id": "eval_0040",
+      "scores": {
+        "response_relevancy": 0.960484
+      },
+      "latency_seconds": 56.063,
+      "total_tokens": 502
+    },
+    {
+      "id": "eval_0041",
+      "scores": {
+        "response_relevancy": 0.905076
+      },
+      "latency_seconds": 54.469,
+      "total_tokens": 493
+    },
+    {
+      "id": "eval_0042",
+      "scores": {
+        "response_relevancy": 0.980102
+      },
+      "latency_seconds": 61.594,
+      "total_tokens": 560
+    },
+    {
+      "id": "eval_0043",
+      "scores": {
+        "response_relevancy": 0.908217
+      },
+      "latency_seconds": 54.063,
+      "total_tokens": 482
+    },
+    {
+      "id": "eval_0044",
+      "scores": {
+        "response_relevancy": 0.988415
+      },
+      "latency_seconds": 33.922,
+      "total_tokens": 265
+    },
+    {
+      "id": "eval_0045",
+      "scores": {
+        "response_relevancy": 0.994358
+      },
+      "latency_seconds": 50.219,
+      "total_tokens": 432
+    },
+    {
+      "id": "eval_0046",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.672,
+      "total_tokens": 138
+    },
+    {
+      "id": "eval_0047",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 59.047,
+      "total_tokens": 536
+    },
+    {
+      "id": "eval_0048",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 17.25,
+      "total_tokens": 106
+    },
+    {
+      "id": "eval_0049",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 15.859,
+      "total_tokens": 84
+    },
+    {
+      "id": "eval_0050",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 50.843,
+      "total_tokens": 453
+    },
+    {
+      "id": "eval_0051",
+      "scores": {
+        "response_relevancy": 0.92135
+      },
+      "latency_seconds": 64.203,
+      "total_tokens": 588
+    },
+    {
+      "id": "eval_0052",
+      "scores": {
+        "response_relevancy": 0.889341
+      },
+      "latency_seconds": 31.828,
+      "total_tokens": 252
+    },
+    {
+      "id": "eval_0053",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 16.921,
+      "total_tokens": 97
+    },
+    {
+      "id": "eval_0054",
+      "scores": {
+        "response_relevancy": 0.988095
+      },
+      "latency_seconds": 77.687,
+      "total_tokens": 717
+    },
+    {
+      "id": "eval_0055",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.812,
+      "total_tokens": 135
+    },
+    {
+      "id": "eval_0056",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 24.063,
+      "total_tokens": 170
+    },
+    {
+      "id": "eval_0057",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 17.625,
+      "total_tokens": 105
+    },
+    {
+      "id": "eval_0058",
+      "scores": {
+        "response_relevancy": 0.752012
+      },
+      "latency_seconds": 47.328,
+      "total_tokens": 403
+    },
+    {
+      "id": "eval_0059",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 57.047,
+      "total_tokens": 512
+    },
+    {
+      "id": "eval_0060",
+      "scores": {
+        "response_relevancy": 0.974419
+      },
+      "latency_seconds": 49.469,
+      "total_tokens": 436
+    },
+    {
+      "id": "eval_0061",
+      "scores": {
+        "response_relevancy": 0.811749
+      },
+      "latency_seconds": 36.844,
+      "total_tokens": 309
+    },
+    {
+      "id": "eval_0062",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 49.078,
+      "total_tokens": 427
+    },
+    {
+      "id": "eval_0063",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 20.0,
+      "total_tokens": 114
+    },
+    {
+      "id": "eval_0064",
+      "scores": {
+        "response_relevancy": 0.98937
+      },
+      "latency_seconds": 86.75,
+      "total_tokens": 550
+    },
+    {
+      "id": "eval_0065",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 91.046,
+      "total_tokens": 454
+    },
+    {
+      "id": "eval_0066",
+      "scores": {
+        "response_relevancy": 0.918536
+      },
+      "latency_seconds": 102.438,
+      "total_tokens": 506
+    },
+    {
+      "id": "eval_0067",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 124.5,
+      "total_tokens": 611
+    },
+    {
+      "id": "eval_0068",
+      "scores": {
+        "response_relevancy": 0.989207
+      },
+      "latency_seconds": 150.062,
+      "total_tokens": 742
+    },
+    {
+      "id": "eval_0069",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 29.594,
+      "total_tokens": 148
+    },
+    {
+      "id": "eval_0070",
+      "scores": {
+        "response_relevancy": 0.0
+      },
+      "latency_seconds": 29.657,
+      "total_tokens": 140
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compact RAG Evaluation Summary",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source",
+    "summary",
+    "per_eval"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "file",
+        "samples"
+      ],
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "samples": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "metrics",
+        "performance"
+      ],
+      "properties": {
+        "metrics": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "performance": {
+          "type": "object",
+          "properties": {
+            "avg_latency_seconds": {
+              "type": "number"
+            },
+            "median_latency_seconds": {
+              "type": "number"
+            },
+            "p95_latency_seconds": {
+              "type": "number"
+            },
+            "avg_prompt_tokens": {
+              "type": "number"
+            },
+            "avg_completion_tokens": {
+              "type": "number"
+            },
+            "avg_total_tokens": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "diagnosis": {
+          "type": "object",
+          "properties": {
+            "strongest_metric": {
+              "type": "string"
+            },
+            "weakest_metric": {
+              "type": "string"
+            },
+            "metric_ranges": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "per_eval": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scores",
+          "latency_seconds",
+          "total_tokens"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "scores": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "latency_seconds": {
+            "type": "number"
+          },
+          "total_tokens": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

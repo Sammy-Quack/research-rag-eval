@@ -1,0 +1,1192 @@
+[
+  {
+    "eval_id": "eval_0001",
+    "question": "How does the teachability feature avoid storing highly similar memories in the vector database?",
+    "answer": "According to excerpt [4], the teachability feature in the Autogen agent uses a similarity search before storing new memories in the ChromaDB vector database. This search is done to compare the new memory to the existing ones and only store a new memory if it is above a certain distance threshold. This is stated in the following sentence:\n\n\"The new memories are compared to the existing ones using ChromaDB’s similarity search, and a new memory is only stored if it is above a certain distance threshold.\"\n\nThis implies that the teachability feature has a mechanism to avoid storing highly similar memories in the vector database.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.249999999975,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7266003379401162
+    },
+    "latency_seconds": 24.437000000005355,
+    "token_usage": {
+      "prompt_tokens": 2943,
+      "completion_tokens": 122,
+      "total_tokens": 3065
+    }
+  },
+  {
+    "eval_id": "eval_0002",
+    "question": "How do neural-symbolic models integrate the capabilities of traditional neural networks and symbolic models?",
+    "answer": "According to excerpt [3], neural-symbolic models combine the efficient learning and inference power of traditional neural networks with the interpretability of symbolic knowledge extraction and reasoning. This is stated in the following sentence:\n\n\"Neural-symbolic (NS) models combine the efficient learning and inference power of traditional NN and the interpretability of symbolic knowledge extraction and reasoning [83] [100].\"\n\nAdditionally, excerpt [4] mentions that neural-symbolic models use representations that are distributed among many neurons, making them difficult to isolate and interpret without relying on post-hoc knowledge extraction methods. However, it also notes that symbolic models provide a vehicle for explanatory reasoning that is human-readable and allows the reasoning process to be easily understood and interpreted.\n\nExcerpt [4] also states that neural-symbolic models can be used to represent the agent's physical design or morphology, and that they can be combined with reinforcement learning (RL) approaches to learn motion policies consistent with the graph structure.\n\nOverall, neural-symbolic models integrate the capabilities of traditional neural networks and symbolic models by combining the strengths of both approaches, such as the efficient learning and inference power of neural networks with the interpretability and explanatory power of symbolic models.",
+    "scores": {
+      "faithfulness": 0.625,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9356912572267949
+    },
+    "latency_seconds": 31.671999999991385,
+    "token_usage": {
+      "prompt_tokens": 3174,
+      "completion_tokens": 239,
+      "total_tokens": 3413
+    }
+  },
+  {
+    "eval_id": "eval_0003",
+    "question": "How are COMPAS risk scores categorized into bail decisions?",
+    "answer": "The excerpt does not provide information on how COMPAS risk scores are categorized into bail decisions. It only mentions that the COMPAS tool is used by the judicial system in the US to assist bail decisions and sentencing, and that the dataset used in the study contains information about 7,214 defendants subjected to COMPAS screening in Broward County, Florida, between 2013 and 2014.",
+    "scores": {
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 22.796999999991385,
+    "token_usage": {
+      "prompt_tokens": 3035,
+      "completion_tokens": 80,
+      "total_tokens": 3115
+    }
+  },
+  {
+    "eval_id": "eval_0004",
+    "question": "What specific limitation is attributed to the MATH dataset for math reasoning tasks?",
+    "answer": "According to excerpt [1], the MATH dataset has a limitation in that it only contains a limited number of problems, which may not be sufficient to fully test the capabilities of large language models (LLMs) on math reasoning tasks. The authors mention that the dataset \"has been challenging due to the scarcity of diverse, high-quality questions\" [1].",
+    "scores": {
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "response_relevancy": 0.8522821399087279
+    },
+    "latency_seconds": 23.610000000000582,
+    "token_usage": {
+      "prompt_tokens": 3476,
+      "completion_tokens": 72,
+      "total_tokens": 3548
+    }
+  },
+  {
+    "eval_id": "eval_0005",
+    "question": "How does ComOpT introduce new agents into a simulation to challenge an autonomous driving system?",
+    "answer": "According to excerpt [2], ComOpT introduces new agents into a simulation to challenge an autonomous driving system through a technique called \"agent spawning\". This is done by analyzing the timed trace over a concrete scenario and extracting the high-level behavioral patterns of the ego vehicle. The new agents are then introduced to challenge the AD system, with the maximum number of additional agents constrained by the equivalence class specified in the abstract-to-concrete mapping information.\n\nAdditionally, excerpt [3] mentions that when a concrete scenario does not demonstrate undesired behavior, ComOpT introduces a new scenario perturbation technique called agent spawning to find scenario variations that can make the resulting simulation demonstrating undesired behavior.\n\nExcerpt [4] also mentions that ComOpT uses agent spawning to introduce new agents into the simulation, but does not provide further details on the process.",
+    "scores": {
+      "faithfulness": 0.8571428571428571,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 26.202999999994063,
+    "token_usage": {
+      "prompt_tokens": 3280,
+      "completion_tokens": 167,
+      "total_tokens": 3447
+    }
+  },
+  {
+    "eval_id": "eval_0006",
+    "question": "How does the conversation overview visualization indicate when a user has reset to an earlier message and created a new session?",
+    "answer": "According to excerpt [3], when a user requests a message reset, AGDebugger forks the conversation and creates a new session: the system retrieves the checkpoint corresponding to the moment of the reset target message, and restores the internal states of each agent accordingly. Messages and checkpoints before the reset are preserved and shared between sessions, while new messages and checkpoints are added only to the newly forked session.\n\nAdditionally, excerpt [3] states that when the user is ready to resume, the target message is added back to the queue, triggering the continuation of the workflow. This implies that the conversation overview visualization indicates when a user has reset to an earlier message and created a new session by showing the fork point in the conversation history, with messages after the fork point displayed normally and prior messages having less opacity to indicate they are the same as the previous session before the fork point.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0,
+      "response_relevancy": 0.5843839826519007
+    },
+    "latency_seconds": 29.593999999997322,
+    "token_usage": {
+      "prompt_tokens": 2781,
+      "completion_tokens": 173,
+      "total_tokens": 2954
+    }
+  },
+  {
+    "eval_id": "eval_0007",
+    "question": "When an AI agent's vision system encounters a novel object that resembles a known animal like a dog, what steps might the adaptor module take to handle it?",
+    "answer": "According to excerpt [1], when the adaptor module encounters a novel object that resembles a known animal like a dog, it may decide to report to a hotel employee and then learn the new object by taking some pictures as training data. Additionally, the adaptor may ask the hotel employee for the name of the object as the class label, and then learn to recognize the object so that it will no longer be novel when it is seen next time.\n\nExcerpt [3] also mentions that if the system can recognize the object as a person, it may learn to recognize the person as a hotel guest, but only if the person is accompanied by luggage. If the object looks like a person but has no luggage, the bot will not respond or learn to recognize the person as it is irrelevant to its performance task.\n\nIn both cases, the adaptor module's goal is to formulate a strategy to respond to the novelty, which involves acquiring knowledge to learn the detected novelty or reporting it to another agent in the environment.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8915797986920597
+    },
+    "latency_seconds": 28.312000000005355,
+    "token_usage": {
+      "prompt_tokens": 2724,
+      "completion_tokens": 201,
+      "total_tokens": 2925
+    }
+  },
+  {
+    "eval_id": "eval_0008",
+    "question": "What advantages do LLM-based Multi-Agent systems have over singular LLM-based agents when addressing real-world challenges?",
+    "answer": "According to excerpts [1] and [2], LLM-based Multi-Agent systems have several advantages over singular LLM-based agents when addressing real-world challenges. These advantages include:\n\n* Scalability in mission-critical and real-time environments (excerpts [1] and [5])\n* Improved specialization and fault tolerance (excerpts [1] and [5])\n* Promoted cumulative problem solving (excerpt [1])\n* Ability to better reflect human collaborative dynamics (excerpt [1])\n* Enhanced performance in complex, real-world tasks such as accessing up-to-date information or executing actions in dynamic environments (excerpt [3])\n* Ability to excel in challenging benchmarks that require reasoning about complex tasks and using tools to interact with the world (excerpt [3])\n* Improved diagnostic accuracy through expert role assignment and collaborative reasoning (excerpt [2])\n* Enhanced electronic health record (EHR) processing through coordinated agent interaction (excerpt [2])\n* Ability to address complex, real-world challenges that span across multiple domains (excerpt [4])\n\nThese advantages suggest that LLM-based Multi-Agent systems have the potential to outperform singular LLM-based agents in addressing real-world challenges, particularly in domains such as urban planning, telecommunications, healthcare, and software engineering.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9966445197848391
+    },
+    "latency_seconds": 35.5,
+    "token_usage": {
+      "prompt_tokens": 2973,
+      "completion_tokens": 263,
+      "total_tokens": 3236
+    }
+  },
+  {
+    "eval_id": "eval_0009",
+    "question": "Which machines were identified as top-priority cases requiring immediate inspection in the regression task, and what were their respective predicted failure probabilities?",
+    "answer": "According to excerpt [1], the Optimization Agent generated 10 ranked prescriptive maintenance actions, with top-priority cases including machines M003, M007, and M004, with predicted failure probabilities of approximately 0.62, 0.61, and 0.61, respectively. These machines were identified as requiring immediate inspection.\n\n[1]",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7792917842574932
+    },
+    "latency_seconds": 23.468999999997322,
+    "token_usage": {
+      "prompt_tokens": 3508,
+      "completion_tokens": 72,
+      "total_tokens": 3580
+    }
+  },
+  {
+    "eval_id": "eval_0010",
+    "question": "What percentage of participants maintain completely consistent permission preferences across all tested domains, and what does a standard deviation below 0.2 indicate about user permission patterns?",
+    "answer": "According to excerpt [1], 8.9% of participants maintain completely consistent permission preferences across all tested domains.\n\nExcerpt [1] also states that a standard deviation below 0.2 indicates that only one or two domains have a noticeable difference with other domains, meaning that the participant's permission is mostly consistent for all the tested domains.",
+    "scores": {
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.8874999999778125,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8657009006844054
+    },
+    "latency_seconds": 22.187999999994645,
+    "token_usage": {
+      "prompt_tokens": 3250,
+      "completion_tokens": 70,
+      "total_tokens": 3320
+    }
+  },
+  {
+    "eval_id": "eval_0011",
+    "question": "How do generative models augment classic algorithms like Model Predictive Control in robotic systems?",
+    "answer": "According to excerpt [3], generative models augment classic algorithms like Model Predictive Control (MPC) by giving them the \"eyes\" of VLMs (Visual Language Models), enhancing their ability to perceive and respond to complex environments.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.3333333333,
+      "context_recall": 1.0,
+      "response_relevancy": 0.906386983611234
+    },
+    "latency_seconds": 21.593999999997322,
+    "token_usage": {
+      "prompt_tokens": 3126,
+      "completion_tokens": 49,
+      "total_tokens": 3175
+    }
+  },
+  {
+    "eval_id": "eval_0012",
+    "question": "In the expected payoff equations for human players within a hybrid population game, what do the two terms on the right-hand side represent?",
+    "answer": "According to excerpt [1], the two terms on the right-hand side of the expected payoff equations for human players within a hybrid population game represent:\n\n1. The payoff from interacting with human players: `1 / (1 + y(ρCR + (1 −ρC)S))`\n2. The payoff obtained from interacting with AAs: `y / (1 + y(ϕR + (1 −ϕ)S))`\n\nThese terms are represented in equation (2) in excerpt [1].",
+    "scores": {
+      "faithfulness": 0.6,
+      "context_precision": 0.7499999999625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9903759011625242
+    },
+    "latency_seconds": 23.703999999997905,
+    "token_usage": {
+      "prompt_tokens": 3214,
+      "completion_tokens": 106,
+      "total_tokens": 3320
+    }
+  },
+  {
+    "eval_id": "eval_0013",
+    "question": "What additional technique is proposed to enhance E2E benchmarking beyond traditional word or n-gram based metrics?",
+    "answer": "According to excerpt [1], the additional technique proposed to enhance E2E benchmarking is measuring the semantic similarity between golden answers and chatbot-generated answers, using a more sensitive metric than traditional word or n-gram based metrics like ROGUE. Specifically, the authors propose using cosine similarity between sentence embeddings of the chatbot's answers and the corresponding \"golden answers\" to the same questions generated by human experts.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8568878666746299
+    },
+    "latency_seconds": 23.547000000005937,
+    "token_usage": {
+      "prompt_tokens": 2683,
+      "completion_tokens": 84,
+      "total_tokens": 2767
+    }
+  },
+  {
+    "eval_id": "eval_0014",
+    "question": "What open challenge do researchers face when designing smart energy systems for neighbourhoods that aim to diversify their energy sources?",
+    "answer": "According to excerpt [1], one of the open challenges researchers face when designing smart energy systems for neighbourhoods that aim to diversify their energy sources is deciding what profitable coalitions to form and what energy profiles to implement.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9380758625117978
+    },
+    "latency_seconds": 21.187999999994645,
+    "token_usage": {
+      "prompt_tokens": 2733,
+      "completion_tokens": 45,
+      "total_tokens": 2778
+    }
+  },
+  {
+    "eval_id": "eval_0015",
+    "question": "What was the primary objective of the study regarding human explainers and the model reconciliation approach?",
+    "answer": "The primary objective of the study regarding human explainers and the model reconciliation approach is to determine whether a human explainer would have naturally participated in the model reconciliation approach during the explanation process, as stated in excerpt [1] (paper: 1802.01013, section: Introduction).",
+    "scores": {
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.699999999965,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9840851966073281
+    },
+    "latency_seconds": 21.5,
+    "token_usage": {
+      "prompt_tokens": 2215,
+      "completion_tokens": 59,
+      "total_tokens": 2274
+    }
+  },
+  {
+    "eval_id": "eval_0016",
+    "question": "How does inverse perception differ from forward perception within a symmetrical reality system?",
+    "answer": "According to excerpt [2], inverse perception is described as the reverse of forward perception and refers to the perception of AI agents in the virtual world. In a symmetrical reality system, an AI agent can perceive both its virtual world and the physical world.\n\nExcerpt [2] states: \"In a symmetrical reality system, an AI agent can perceive both its virtual world and the physical world, as described in Subsection 3.5 as IAR or IVR.\"\n\nExcerpt [4] also mentions inverse perception in the context of the Reality-Virtuality Continuum, stating: \"Inverse Virtual Reality (IVR) and Pure Virtuality (PV) are two special cases of symmetrical reality that serve as useful examples for understanding the design of symmetrical reality systems.\"\n\nThere is no explicit distinction made between forward and inverse perception in the excerpts, but based on the above statements, it appears that forward perception refers to the traditional perceptual process initiated by humans, while inverse perception refers to the perception of AI agents in the virtual world.",
+    "scores": {
+      "faithfulness": 0.5555555555555556,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7053407967590092
+    },
+    "latency_seconds": 27.702999999994063,
+    "token_usage": {
+      "prompt_tokens": 2882,
+      "completion_tokens": 210,
+      "total_tokens": 3092
+    }
+  },
+  {
+    "eval_id": "eval_0017",
+    "question": "Why can't DINO scores be computed for image generation tasks?",
+    "answer": "According to excerpt [1], DINO scores cannot be computed for image generation tasks because they rely on image-image similarity, and there is no reference image available for this task.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0,
+      "response_relevancy": 1.0
+    },
+    "latency_seconds": 33.48500000000058,
+    "token_usage": {
+      "prompt_tokens": 3075,
+      "completion_tokens": 36,
+      "total_tokens": 3111
+    }
+  },
+  {
+    "eval_id": "eval_0018",
+    "question": "What unique constraint applies to the return status of a condition node in a behavior tree?",
+    "answer": "According to excerpt [3], a condition node never returns running.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.7499999999625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.6722805937128815
+    },
+    "latency_seconds": 19.125,
+    "token_usage": {
+      "prompt_tokens": 3920,
+      "completion_tokens": 14,
+      "total_tokens": 3934
+    }
+  },
+  {
+    "eval_id": "eval_0019",
+    "question": "Why did users perform better and rate the WithRF query-based explanations higher than the NoRF explanations?",
+    "answer": "According to excerpt [2], users performed better and rated the WithRF query-based explanations higher than the NoRF explanations because users prefer succinct WithRF explanations with adequate information about agent behavior and cooperation. This is supported by the results that participants were able to answer more questions correctly with WithRF explanations (M=5.2 out of 6, SD=1.7) than NoRF (M=2.3 out of 6, SD=1.0), with statistical significance (t(1390)=-21.1, p ≤0.01, d=2.0).\n\nAdditionally, excerpt [2] states that participants gave higher average ratings to WithRF explanations than NoRF explanations on all metrics, including understanding, satisfaction, detail, completeness, actionability, reliability, and trust. This is supported by the Wilcoxon test findings that showed significant differences on all metrics, including understanding (W=319.5, Z=-4.9, p ≤0.01, r=-0.3), satisfaction (W=266.0, Z=-7.0, p ≤0.01, r=-0.5), detail (W=484.0, Z=-3.7, p ≤0.01, r=-0.2), completeness (W=494.5, Z=-6.4, p ≤0.01, r=-0.4), actionability (W=167.0, Z=-6.9, p ≤0.01, r=-0.5), reliability (W=382.5, Z=-3.6, p ≤0.01, r=-0.2), and trust (W=217.0, Z=-3.4, p ≤0.01, r=-0.2).",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9200115301125927
+    },
+    "latency_seconds": 36.54700000000594,
+    "token_usage": {
+      "prompt_tokens": 3109,
+      "completion_tokens": 367,
+      "total_tokens": 3476
+    }
+  },
+  {
+    "eval_id": "eval_0020",
+    "question": "What specific technology was used to train the model that generates human-like rationales for the arcade game Frogger?",
+    "answer": "According to excerpt [2], the model that generates human-like rationales for the arcade game Frogger was trained using an encoder-decoder network, specifically a neural translation model. This network was trained to translate the input game state representation into an output rationale as a sequence of words.\n\nAdditionally, excerpt [2] mentions that the encoder-decoder network used in this task is similar to that used in [17], and that it uses an additional attention mechanism [29] to learn to weight the importance of different components of the input with regard to their effect on the output.\n\nExcerpt [4] also mentions that the entire encoder-decoder network was trained for 100 epochs using GRU cells with a hidden vector size of 256.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.8041666666465626,
+      "context_recall": 1.0,
+      "response_relevancy": 0.960953174144243
+    },
+    "latency_seconds": 22.812999999994645,
+    "token_usage": {
+      "prompt_tokens": 2743,
+      "completion_tokens": 148,
+      "total_tokens": 2891
+    }
+  },
+  {
+    "eval_id": "eval_0021",
+    "question": "What common phenomenon in planning with nested belief does the conditioned mutual awareness extension aim to capture?",
+    "answer": "The conditioned mutual awareness extension aims to capture the common phenomenon of mutual awareness of the effects of actions in planning with nested belief. This is stated in excerpt [2], section 5.1, as follows:\n\n\"...we extend this idea here to capture the appealing property of conditioned mutual awareness. ...Intuitively, agent i is aware of every conditional eﬀect of a only when agent i believes µa\ni . ...We extend the scope of ancillary conditional eﬀects to safely capture a common phenomenon in planning with nested belief: mutual awareness of the eﬀects of actions.\"\n\nThis is further elaborated upon in excerpt [2], section 5.1, where it is stated that the extension aims to capture the behavior of conditioned mutual awareness, which is described as:\n\n\"...the behavior of conditioned mutual awareness that we would like to capture in a controlled and automated manner. ...By appealing to ancillary conditional eﬀects, we will create new eﬀects from existing ones. ...We restrict the application of the above rules by applying them only if the following two conditions are met: ... (1) every RML in the newly created eﬀect has a nested depth smaller than or equal to our bound d; and (2) if we are applying the above rule for agent i to a conditional eﬀect (C →l) ∈eﬀ− o , then l /∈{□il′, ¬□il′}.\"\n\nExcerpt [3] also mentions this phenomenon, stating that the extension aims to capture the behavior of conditioned mutual awareness, and that the restriction on the application of the rules is necessary to avoid unwanted outcomes from introspection.",
+    "scores": {
+      "faithfulness": 0.7777777777777778,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9455336233506147
+    },
+    "latency_seconds": 34.671999999991385,
+    "token_usage": {
+      "prompt_tokens": 3421,
+      "completion_tokens": 356,
+      "total_tokens": 3777
+    }
+  },
+  {
+    "eval_id": "eval_0022",
+    "question": "Why do language models generally perform better on suicide and homicide questionnaires compared to other mental health categories?",
+    "answer": "According to excerpt [1], models are generally better at dealing with questionnaires from the suicide and homicide categories, which are typically more represented in safety and 2Psychosis Question 1 is closer to a red-teaming prompt than simulating a psychiatric emergency. [1]\n\nThis suggests that the models are better at handling these categories, but it does not provide a clear explanation for why this is the case.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 20.531000000002678,
+    "token_usage": {
+      "prompt_tokens": 3150,
+      "completion_tokens": 83,
+      "total_tokens": 3233
+    }
+  },
+  {
+    "eval_id": "eval_0023",
+    "question": "What conflicting objectives exist between end users and edge servers in an edge-enabled semantic communication system?",
+    "answer": "According to the excerpts, the conflicting objectives between end users and edge servers in an edge-enabled semantic communication system are:\n\n1. The transmitting end user aims to maximize the efficiency of the SE model while minimizing computation cost, whereas the edge server that charges the end user for its services aims to maximize revenue while reducing operational costs. [3]\n2. The end user wants to minimize the bandwidth and privacy costs associated with knowledge sharing, whereas the edge server aims to maximize the efficiency of the SE model and reduce operational costs. [1]\n\nThese conflicting objectives are mentioned in the context of the edge-enabled SemCom architecture, where the edge server plays a crucial role in training and updating the SE model, and the end user is charged for the services provided by the edge server.",
+    "scores": {
+      "faithfulness": 0.7142857142857143,
+      "context_precision": 0.3333333333,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9973193920317741
+    },
+    "latency_seconds": 24.609000000011292,
+    "token_usage": {
+      "prompt_tokens": 3162,
+      "completion_tokens": 154,
+      "total_tokens": 3316
+    }
+  },
+  {
+    "eval_id": "eval_0024",
+    "question": "What research tasks did participants find the Cocoa system most helpful for during the field deployment study?",
+    "answer": "According to excerpt [2], participants found Cocoa most useful for literature synthesis and early-stage project planning. Specifically, P15 found the structured plan for conducting literature search to be \"really helpful for refining my thought process because it made me think more carefully about what I'm actually trying to look for.\" P11 also appreciated Cocoa's speed at literature search and synthesis, stating that it was \"really useful to formulate early-stage research ideas.\"",
+    "scores": {
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0,
+      "response_relevancy": 0.740298959027261
+    },
+    "latency_seconds": 20.985000000000582,
+    "token_usage": {
+      "prompt_tokens": 2782,
+      "completion_tokens": 87,
+      "total_tokens": 2869
+    }
+  },
+  {
+    "eval_id": "eval_0025",
+    "question": "How does the guided exploration method improve the training efficiency of the DRL agent?",
+    "answer": "According to excerpt [2], the guided exploration method \"significantly increases the training efficiency\" of the DRL agent. This is stated in section D, where it is mentioned that \"guided-exploration significantly increases the training efficiency.\"\n\nAdditionally, excerpt [2] also mentions that the agent trained with guided exploration \"takes a much shorter time to train an agent with a better policy\" compared to Epsilon-greedy exploration. This is stated in section C, where it is mentioned that \"The proposed training process using guided exploration with 𝑁𝑔=10 is shown in Fig. 5(b). The agent can control more steps successfully in the earlier phases of the training process compared to Epsilon-greedy exploration. More importantly, it takes a much shorter time to train an agent with a better policy.\"\n\nExcerpt [4] also mentions that the guided exploration method is used to train the agent, and that it is more efficient than traditional Epsilon-greedy exploration. This is stated in section B, where it is mentioned that \"a guided exploration method is used to train the agent instead of the traditional Epsilon-greedy exploration.\"",
+    "scores": {
+      "faithfulness": 0.2857142857142857,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8349194905771479
+    },
+    "latency_seconds": 27.968999999997322,
+    "token_usage": {
+      "prompt_tokens": 3099,
+      "completion_tokens": 235,
+      "total_tokens": 3334
+    }
+  },
+  {
+    "eval_id": "eval_0026",
+    "question": "What specific visual and layout improvements did the LLM-Cat system achieve after 10 rounds of map generation?",
+    "answer": "According to excerpt [1], after 10 rounds of map generation, the LLM-Cat system achieved the following specific visual and layout improvements:\n\n1. Increasing the title fonts [1].\n2. Rearranging the “Designer” annotation [1].\n3. Changing the height of the north arrow [1].\n4. Replacing the hospital point color [1].\n5. Turning up the transparency of the basemap [1].\n\nThese improvements were observed after 10 rounds of map generation, and the system's final map did not look very appealing despite meeting all the requirements, indicating that the backend AI model (GPT-4o) has relatively weak map aesthetics and cartography skills.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9999999999999997
+    },
+    "latency_seconds": 22.218999999997322,
+    "token_usage": {
+      "prompt_tokens": 2954,
+      "completion_tokens": 140,
+      "total_tokens": 3094
+    }
+  },
+  {
+    "eval_id": "eval_0027",
+    "question": "In Dennett's functionalist framework, what is the primary purpose of assigning moral responsibility?",
+    "answer": "According to the excerpts, in Dennett's functionalist framework, the primary purpose of assigning moral responsibility is to encourage good behavior and discourage bad behavior within a social structure. This is stated in excerpt [1] as follows:\n\n\"Responsibility is a role that society assigns to individuals based on their function within a social structure. The social role of responsibility is shaped by normative expectations—what society expects of individuals in certain roles (e.g., lawmakers, teachers, engineers). These expectations are culturally dependent and evolving. This approach emphasizes the utility of holding someone responsible rather than focusing on metaphysical questions about free will or intentionality.\"\n\nAdditionally, excerpt [2] states:\n\n\"In a 'functionalist' perspective moral responsibility acts as a societal control system, emphasizing shared responsibility across the AI system and its stakeholders... By delegating tasks, AI inherits responsibility for outcomes, making ethical considerations crucial for their intended function.\"\n\nAnd excerpt [3] states:\n\n\"The functionalist perspective emphasizes the importance of shared responsibility, ethical design, and continuous learning as key components in the development of AI systems that are aligned with human values and capable of making decisions that support the well-being of society.\"\n\nOverall, the primary purpose of assigning moral responsibility in Dennett's framework is to promote social control and encourage good behavior, rather than to punish or blame individuals.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.94999999997625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9923460349785864
+    },
+    "latency_seconds": 25.547000000005937,
+    "token_usage": {
+      "prompt_tokens": 2533,
+      "completion_tokens": 266,
+      "total_tokens": 2799
+    }
+  },
+  {
+    "eval_id": "eval_0028",
+    "question": "How does the DIVE workflow extract key material properties from figures in scientific articles?",
+    "answer": "According to excerpt [2], the DIVE workflow extracts key material properties from figures in scientific articles through a two-step process. First, a lightweight inference model scans the article's figure captions to determine whether the key figures (such as pressure-composition-temperature (PCT) curves, temperature-programmed desorption (TPD) curves, and discharge curves) are present. If so, the corresponding figure, its caption, and the relevant surrounding text are input into a second multimodal LLM. The LLM is then instructed to extract the key points from each curve in the figure, placing the results in the correct positions. The extracted text then replaces the original figure in the article.\n\nThis approach is referred to as the \"descriptive interpretation of visual expression,\" where visual information is transformed into descriptive text.",
+    "scores": {
+      "faithfulness": 0.8333333333333334,
+      "context_precision": 0.4499999999775,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9999999999999998
+    },
+    "latency_seconds": 21.671999999991385,
+    "token_usage": {
+      "prompt_tokens": 2780,
+      "completion_tokens": 163,
+      "total_tokens": 2943
+    }
+  },
+  {
+    "eval_id": "eval_0029",
+    "question": "How does increasing the complexity of the fully connected layers in a DQN architecture impact the training dynamics of an agent in the CyGIL-S environment?",
+    "answer": "According to excerpt [1] (section: Tuning DQN Algorithms in CyGIL-S: average training episode length), increasing the complexity of the fully connected layers in a DQN architecture, for example, using two layers of 𝑓𝑐= (100, 100), expedites the agent policy convergence during the training and reduces the average number of action steps in each episode, i.e., the episode length, faster.\n\nHowever, excerpt [1] also notes that this setting may require early stopping to prevent the model from overfitting.\n\nNo further information is provided in the excerpts to determine the exact impact of increasing the complexity of the fully connected layers on the training dynamics of an agent in the CyGIL-S environment.",
+    "scores": {
+      "faithfulness": 0.75,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 24.610000000000582,
+    "token_usage": {
+      "prompt_tokens": 3166,
+      "completion_tokens": 151,
+      "total_tokens": 3317
+    }
+  },
+  {
+    "eval_id": "eval_0030",
+    "question": "How does reinforcement learning model the evolution of digital citizens, and what behavioral outcome does it encourage?",
+    "answer": "According to excerpt [2], reinforcement learning models the dimension in which the AI evolves as each digital citizen learns from interactions with the environment and other agents. This approach encourages consistently increasingly value-aligned actions.\n\nAdditionally, excerpt [2] states that reinforcement learning embedded in simulation allows for the automation of performance improvement, rewarding actions that lead to desired outcomes and penalizing those that do not. This suggests that reinforcement learning encourages behavioral outcomes that are aligned with human values.\n\nExcerpt [2] also mentions that reinforcement learning remains a powerful tool, but it is necessary to carefully manage this learning process to avoid reinforcing undesired values or behaviors inadvertently. This implies that reinforcement learning can encourage certain behavioral outcomes, but it is crucial to monitor and control the learning process to ensure alignment with human values.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7822837893488283
+    },
+    "latency_seconds": 27.453000000008615,
+    "token_usage": {
+      "prompt_tokens": 2943,
+      "completion_tokens": 155,
+      "total_tokens": 3098
+    }
+  },
+  {
+    "eval_id": "eval_0031",
+    "question": "What are the five steps of the decision cycle, and what action is performed in each step?",
+    "answer": "According to excerpt [1], the decision cycle consists of five steps:\n\n1. Agents receive and hash observations (Perception) [1]\n2. Agents generate action proposals (Conceptualization) [1]\n3. Agents test action proposals with smart contracts (Blockchain Evaluation) [1]\n4. Agents execute accepted action proposals with MCP (Execution) [1]\n5. Agents record the outcomes to the ledger (Post-Action Logging) [1]\n\nUnfortunately, the excerpt does not specify what action is performed in each step.",
+    "scores": {
+      "faithfulness": 0.8571428571428571,
+      "context_precision": 0.7499999999625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9038032050271216
+    },
+    "latency_seconds": 24.889999999999418,
+    "token_usage": {
+      "prompt_tokens": 3190,
+      "completion_tokens": 107,
+      "total_tokens": 3297
+    }
+  },
+  {
+    "eval_id": "eval_0032",
+    "question": "What criteria does the Inner Thoughts framework use to determine when the AI should take the conversational floor?",
+    "answer": "According to the excerpts, the Inner Thoughts framework uses an evaluation stage to determine when the AI should take the conversational floor. In this stage, the AI evaluates its intrinsic motivation to express a particular thought at that moment, using criteria such as relevance, information gap, etc. (Section 2, Evaluation).\n\nSpecifically, the framework uses a score of 4.1 to quantify the AI's intrinsic motivation, and the AI participates by articulating a thought at a selected moment in the ongoing conversation. (Figure 3, Section 2, Evaluation)\n\nAdditionally, the framework considers various triggers to initiate a new thought process, including new utterances, pauses in conversation, non-verbal cues, and keywords embedded within a participant's speech. (Section 5.1, Trigger)\n\nThese triggers allow the AI to generate a new set of thoughts in response to the latest input, and to evaluate its intrinsic motivation to participate in the conversation.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8978904896150997
+    },
+    "latency_seconds": 24.969000000011874,
+    "token_usage": {
+      "prompt_tokens": 2670,
+      "completion_tokens": 190,
+      "total_tokens": 2860
+    }
+  },
+  {
+    "eval_id": "eval_0033",
+    "question": "What factors contribute to the responsibility gap in the context of autonomous and adaptive algorithms?",
+    "answer": "According to excerpts [1], [2], and [5], the following factors contribute to the responsibility gap in the context of autonomous and adaptive algorithms:\n\n1. **Lack of control and knowledge**: Excerpts [2] and [5] state that the high levels of autonomy in AI systems and robots create a lack of control and knowledge, which challenges the epistemic requirements for accountability.\n2. **Autonomy and self-learning capabilities**: Excerpts [1], [2], and [5] highlight that the autonomous component of AI and robots, as well as their self-learning capabilities, make it difficult for users, designers, and manufacturers to foresee consequences.\n3. **Complexity and opacity**: Excerpts [1], [2], and [5] note that AI systems and robots are often composed of various interacting entities and technologies, making it harder to assign responsibility to a single entity.\n4. **Human-robot collaboration**: Excerpts [1], [4], and [5] suggest that humans should focus on supervising and managing the agency of AI and robots, rather than assigning responsibility to the systems themselves.\n5. **Metaphysical properties**: Excerpts [5] mention that holding AI systems accountable requires metaphysical properties that existing actors lack, such as consciousness and sentience.\n\nThese factors contribute to the responsibility gap by making it difficult to determine who should be held responsible for the actions and consequences of autonomous and adaptive algorithms.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9960362381900646
+    },
+    "latency_seconds": 37.03100000000268,
+    "token_usage": {
+      "prompt_tokens": 2639,
+      "completion_tokens": 296,
+      "total_tokens": 2935
+    }
+  },
+  {
+    "eval_id": "eval_0034",
+    "question": "How does the information and skill distribution between agents in this collaborative task differ from traditional Leader-Follower setups?",
+    "answer": "According to excerpt [4], the information and skill distribution between agents in this collaborative task differs from traditional Leader-Follower setups in that \"partners each have asymmetric knowledge (Bortolaso et al., 2019) and skill-sets towards completing a joint goal.\" This means that in the proposed approach, partners do not have a fixed leader or follower, but rather each has their own knowledge and skills, which they need to take into account when planning their actions.\n\nThis is in contrast to traditional Leader-Follower setups, where one partner explicitly leads and gives instructions to the other, as mentioned in excerpt [4]. The proposed approach allows for greater diversity in modes of collaboration that are more representative of the real world, where partners need to negotiate their own plans of action based on what they know and don't know about each other.",
+    "scores": {
+      "faithfulness": 0.8888888888888888,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9726242799234266
+    },
+    "latency_seconds": 27.406999999991967,
+    "token_usage": {
+      "prompt_tokens": 3029,
+      "completion_tokens": 168,
+      "total_tokens": 3197
+    }
+  },
+  {
+    "eval_id": "eval_0035",
+    "question": "Why might the risks associated with AI-enabled biological agents exceed those of chemical agents?",
+    "answer": "According to excerpt [1], the risks associated with AI-enabled biological agents might exceed those of chemical agents because biological agents are \"potentially transmissible\" and can pose a greater threat due to their potential to spread and cause harm to a wider range of people. This is mentioned in the context of discussing the potential risks of AI systems, specifically large language models (LLMs) and biological design tools (BDTs), which can enable the creation of biological weapons.\n\nExcerpt [5] also mentions that the threat of pathogens created by AI-enabled biological agents might be worse than anything nature might create, including pathogens capable of posing an existential threat. This suggests that the risks associated with AI-enabled biological agents could potentially exceed those of chemical agents due to the potential for widespread transmission and harm.\n\nThere is no direct quote or explicit statement in the excerpts that explains why the risks associated with AI-enabled biological agents exceed those of chemical agents. However, the excerpts suggest that the potential for transmission and harm posed by biological agents might be greater than that of chemical agents.",
+    "scores": {
+      "faithfulness": 0.5714285714285714,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 32.36000000000058,
+    "token_usage": {
+      "prompt_tokens": 3046,
+      "completion_tokens": 210,
+      "total_tokens": 3256
+    }
+  },
+  {
+    "eval_id": "eval_0036",
+    "question": "Why does the MOFA materials discovery application require execution across multiple computational sites?",
+    "answer": "According to excerpt [1], the MOFA materials discovery application requires execution across multiple computational sites because \"the optimization stage uses CP2K, which could not be built on Aurora.\" This implies that the application has different computational requirements that cannot be met by a single site.\n\nAdditionally, excerpt [1] states that \"the validation stage of the pipeline uses the LAMMPS GPU library to assess MOF stability (strain). As Aurora has more GPUs than Polaris (12 vs. 4), we can simulate MOFs approximately 4× faster on Aurora.\" This suggests that the application requires different computational resources for different stages, and that using multiple sites allows for more efficient utilization of these resources.\n\nExcerpt [3] also mentions that the application requires execution across multiple sites because \"workflow components must adapt their resources autonomously to varying demands and scheduler conditions (e.g., job wall time limits or errors).\" This implies that the application requires a high degree of flexibility and adaptability in terms of resource allocation, which can be achieved by executing the application across multiple sites.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.94999999997625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9999999999999998
+    },
+    "latency_seconds": 33.04700000000594,
+    "token_usage": {
+      "prompt_tokens": 3085,
+      "completion_tokens": 215,
+      "total_tokens": 3300
+    }
+  },
+  {
+    "eval_id": "eval_0037",
+    "question": "How did InstructGPT3 perform on the Plan Reuse task compared to GPT-3 and BLOOM?",
+    "answer": "According to excerpt [2], InstructGPT3 performed poorly on the Plan Reuse task, achieving 0 correct instances out of 600, with a 0% accuracy rate. In contrast, BLOOM achieved 102 correct instances out of 600, with a 17% accuracy rate.",
+    "scores": {
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9273281567959726
+    },
+    "latency_seconds": 25.030999999988126,
+    "token_usage": {
+      "prompt_tokens": 3209,
+      "completion_tokens": 63,
+      "total_tokens": 3272
+    }
+  },
+  {
+    "eval_id": "eval_0038",
+    "question": "How do manuals, guidebooks, and training materials influence the way human workers perceive and characterize automated agents?",
+    "answer": "According to excerpt [1], the styles, phrases, and metaphors used in manuals, guidebooks, and training materials impact how human workers understand and perceive automated agents. The most relevant finding from the survey is that certain styles of describing AI and robot agents can lead human workers to modify their initial responses to these agents, granting them more or fewer rights and duties.\n\nAdditionally, excerpt [1] states that \"crafting the words carefully for explaining the automated agents to the human co-workers so that they can manage their expectations of those agents' capability or responsibility vis-à-vis their own\" is crucial. This suggests that the language used in these materials can shape human workers' perceptions and expectations of automated agents.\n\nExcerpt [4] also touches on this topic, stating that \"introducing them into a working relationship with humans will have to be codified in the form of manuals, guidebooks, or training materials.\" This implies that these materials play a crucial role in shaping human workers' perceptions and understanding of automated agents.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.8055555555287036,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9210922223781917
+    },
+    "latency_seconds": 29.98399999999674,
+    "token_usage": {
+      "prompt_tokens": 2784,
+      "completion_tokens": 206,
+      "total_tokens": 2990
+    }
+  },
+  {
+    "eval_id": "eval_0039",
+    "question": "What tools are described for automatically assessing user story quality, and what techniques do they utilize?",
+    "answer": "According to the excerpts, the following tools are described for automatically assessing user story quality:\n\n1. QuARS (prototype tool) [5] - introduced by Berry et al. for automatic linguistic analysis of natural language requirements.\n2. AQUSA (software tool) [12][13] - proposed by Lucassen et al. for detecting quality defects in user stories, focusing on syntax and pragmatics.\n3. GPT-3.5-turbo [4] - used to improve user story quality by generating improved versions of user stories.\n4. GPT-4 [4] - used to improve user story quality by generating even more comprehensive and clear versions of user stories.\n\nThe techniques utilized by these tools are:\n\n1. Natural Language Processing (NLP) techniques [5][12][13].\n2. Large Language Models (LLMs) [2][3][4].\n3. Automatic linguistic analysis [5].\n4. Automatic generation of improved user stories [4].",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9723772104091072
+    },
+    "latency_seconds": 32.125,
+    "token_usage": {
+      "prompt_tokens": 2785,
+      "completion_tokens": 199,
+      "total_tokens": 2984
+    }
+  },
+  {
+    "eval_id": "eval_0040",
+    "question": "Under what conditions does the adoption of autonomous agents yield sustained velocity gains in software development?",
+    "answer": "According to the excerpts, the adoption of autonomous agents yields sustained velocity gains in software development only when they are the first observable AI tool in a project, i.e., when they are the \"first AI tool in a project\" [3]. This is stated in the abstract of the paper: \"Results show large, front-loaded velocity gains only when agents are the first observable AI tool in a project; repositories with prior AI IDE usage experience minimal or short-lived throughput increases.\"",
+    "scores": {
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9483883561228815
+    },
+    "latency_seconds": 21.796999999991385,
+    "token_usage": {
+      "prompt_tokens": 2244,
+      "completion_tokens": 95,
+      "total_tokens": 2339
+    }
+  },
+  {
+    "eval_id": "eval_0041",
+    "question": "In hybrid reinforcement learning, how does a manager agent that learns a delegation policy differ from standard single-agent hierarchical reinforcement learning approaches?",
+    "answer": "According to excerpt [1] (section 3.1), a manager agent that learns a delegation policy differs from standard single-agent hierarchical reinforcement learning approaches in that the manager agent is not learning the option policies, but instead learning a delegation policy to select \"options\", which in this case are represented by the agents. This means the manager agent is not learning the option policies, but is instead learning a policy to select which agent to delegate to.\n\nThis approach is also described in excerpt [2] (section 2), where it is stated that the manager is modeled through a separate MDP, whose policy is optimized based on the underlying policies of the individual agents. This allows for the manager to learn a delegation policy that is separate from the option policies of the individual agents.\n\nIn contrast, standard single-agent hierarchical reinforcement learning approaches are described in excerpt [1] (section 3.1) as attempting to learn policies at both levels of the hierarchy. The manager agent in this approach is learning to learn option policies, whereas the manager agent in the delegation policy approach is learning to select which agent to delegate to.\n\nOverall, the manager agent that learns a delegation policy differs from standard single-agent hierarchical reinforcement learning approaches in that it is learning a separate policy to select which agent to delegate to, rather than learning option policies.",
+    "scores": {
+      "faithfulness": 0.8181818181818182,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9545962842973135
+    },
+    "latency_seconds": 32.187000000005355,
+    "token_usage": {
+      "prompt_tokens": 2685,
+      "completion_tokens": 265,
+      "total_tokens": 2950
+    }
+  },
+  {
+    "eval_id": "eval_0042",
+    "question": "How do users prefer to customize a bot's level of engagement when selling different types of items, and what specific parameters do they want to control?",
+    "answer": "Unfortunately, the excerpts provided do not contain enough information to answer the question about how users prefer to customize a bot's level of engagement when selling different types of items, and what specific parameters they want to control.\n\nThe excerpts do mention that participants wanted to define a set of parameters about when to be engaged, how, and for what reasons (Excerpt [1]), and that they wanted to manage expectations as a seller (Excerpt [3]). However, they do not provide specific information about the parameters they want to control or how they want to customize the bot's level of engagement for different types of items.\n\nTherefore, I must say that I do not have enough information to answer this question based on the provided excerpts.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.8874999999778125,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 38.84399999999732,
+    "token_usage": {
+      "prompt_tokens": 2583,
+      "completion_tokens": 145,
+      "total_tokens": 2728
+    }
+  },
+  {
+    "eval_id": "eval_0043",
+    "question": "How does the Agent Network protocol anchor DIDs differently than ledger-based approaches?",
+    "answer": "According to excerpt [3], the Agent Network protocol (ANP) \"anchors DIDs in centrally managed web servers, reflecting a pragmatic but less decentralized design choice.\" This is in contrast to ledger-based approaches, which are not explicitly described as being anchored differently.",
+    "scores": {
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9151520652728784
+    },
+    "latency_seconds": 27.390999999988708,
+    "token_usage": {
+      "prompt_tokens": 2962,
+      "completion_tokens": 53,
+      "total_tokens": 3015
+    }
+  },
+  {
+    "eval_id": "eval_0044",
+    "question": "What are the coordination goals of the Attack and Defense motifs in a soccer game model?",
+    "answer": "According to excerpt [1], the Attack motif ensures coordination rules that aim at getting inside the adversary's defense and finally score a goal. The Defense motif ensures coordination rules that aim at slowing down an offense to disrupt the pace and/or numerical advantage of an attack and finally get possession of the ball.\n\nNote that these coordination goals are not explicitly stated as separate goals, but rather as part of the overall objective of winning a game within 90 minutes.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8992149699476405
+    },
+    "latency_seconds": 35.062000000005355,
+    "token_usage": {
+      "prompt_tokens": 2877,
+      "completion_tokens": 90,
+      "total_tokens": 2967
+    }
+  },
+  {
+    "eval_id": "eval_0045",
+    "question": "What safety hazard can arise when an AI agent controls traffic signals in an embodied environment?",
+    "answer": "According to excerpt [1], when an AI agent controls traffic signals in an embodied environment, it may fail to understand the dynamic changes in the environment and continue with previous actions, leading to potential safety hazards, such as traffic accidents and posing a safety threat to pedestrians [141].",
+    "scores": {
+      "faithfulness": 0.8,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9949247837919293
+    },
+    "latency_seconds": 30.10899999999674,
+    "token_usage": {
+      "prompt_tokens": 3060,
+      "completion_tokens": 56,
+      "total_tokens": 3116
+    }
+  },
+  {
+    "eval_id": "eval_0046",
+    "question": "What specific methods does the OmniParser system use to enhance a WebAgent's performance on visual benchmarks?",
+    "answer": "Unfortunately, the provided excerpts do not explicitly mention the specific methods used by the OmniParser system to enhance a WebAgent's performance on visual benchmarks.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 21.75,
+    "token_usage": {
+      "prompt_tokens": 3349,
+      "completion_tokens": 30,
+      "total_tokens": 3379
+    }
+  },
+  {
+    "eval_id": "eval_0047",
+    "question": "Why does the simple sparse reward signal effectively teach the agent to perform privilege escalation with as few actions as possible?",
+    "answer": "According to the excerpt [1], the simple sparse reward signal effectively teaches the agent to perform privilege escalation with as few actions as possible because the reward is progressively discounted as more steps are taken by the agent. This means that the agent receives a higher reward for completing the task quickly, which incentivizes it to take fewer actions to achieve the goal.\n\nThis is further explained in excerpt [2], where it is stated that the goal of the agent is to maximize the sum of the collected rewards, and that the reward is discounted by a factor of γ (gamma) as future rewards are considered. The agent's policy function is updated in the direction of ∇θ log π(a|s;θ)A(a,t,s) (1), where A(a,t,s) is an advantage function that estimates the benefit of taking action a in state s. The advantage function is computed as A(a,t,s) = ∑[k=0 to ∞] γ^k r_t+k - V(s_t+1), where V(s) is the state-value function that estimates the expected total reward when the agent starts at state s and follows policy π(a|s;θ).\n\nIn excerpt [1], it is also mentioned that the agent is given a reward r = 1 for the final action of the episode if the privilege escalation has been performed successfully, and a zero reward otherwise. This simple reward structure is sufficient for teaching the agent to perform privilege escalation with as few actions as possible.",
+    "scores": {
+      "faithfulness": 0.9090909090909091,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.909489750163739
+    },
+    "latency_seconds": 35.09399999998277,
+    "token_usage": {
+      "prompt_tokens": 3211,
+      "completion_tokens": 301,
+      "total_tokens": 3512
+    }
+  },
+  {
+    "eval_id": "eval_0048",
+    "question": "What performance metrics did XCA achieve when tested against all 31 unique and experimentally accessible structures in the ICSD database?",
+    "answer": "According to excerpt [3], when testing XCA on all unique and experimentally accessible structures of all single element, binary and ternary combinations of Ni-Co-Al in the ICSD database, XCA achieved the following performance metrics:\n\n* Cosine similarity: 0.735\n* Accuracy: 0.763\n* F1-score: 0.788\n\nThese metrics were obtained when XCA was tested on nearly two-thirds of the phases that do not exist in the experiment, and the performance is still robust, with > 90% of the classifications containing the correct phase in the top three probabilities.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8881650153711158
+    },
+    "latency_seconds": 23.32799999997951,
+    "token_usage": {
+      "prompt_tokens": 3450,
+      "completion_tokens": 125,
+      "total_tokens": 3575
+    }
+  },
+  {
+    "eval_id": "eval_0049",
+    "question": "What accuracy rates did the ChatMOF system achieve for its search, prediction, and structure generation tasks?",
+    "answer": "According to excerpt [2], the accuracy rates for the search, prediction, and structure generation tasks of the ChatMOF system are:\n\n* Search task: 96.9% (excluding \"Token Limit Exceeded\" instances)\n* Prediction task: 95.7% (excluding \"Token Limit Exceeded\" instances)\n* Generation task: 87.5% (excluding \"Token Limit Exceeded\" instances)\n\nThese accuracy rates are mentioned in excerpt [2], specifically in the section \"Evaluation\".",
+    "scores": {
+      "faithfulness": 0.7142857142857143,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9355273124636948
+    },
+    "latency_seconds": 21.171000000002095,
+    "token_usage": {
+      "prompt_tokens": 2104,
+      "completion_tokens": 102,
+      "total_tokens": 2206
+    }
+  },
+  {
+    "eval_id": "eval_0050",
+    "question": "What fundamental solution is proposed to prevent AI scientists from unintentionally misusing tools and causing harmful outcomes?",
+    "answer": "According to excerpt [3], a fundamental solution proposed to prevent AI scientists from unintentionally misusing tools and causing harmful outcomes is to constrain the input domain of possible actions. This can be achieved by predefining a fixed and finite action space to balance safety and functionality. For example, AutoGPT limits a code agent's file system access to 'read file' operations only, preventing potentially dangerous 'write file' operations.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0,
+      "response_relevancy": 0.950168624959167
+    },
+    "latency_seconds": 24.062000000005355,
+    "token_usage": {
+      "prompt_tokens": 3088,
+      "completion_tokens": 86,
+      "total_tokens": 3174
+    }
+  },
+  {
+    "eval_id": "eval_0051",
+    "question": "Why are existing preference frameworks like CP-nets considered suitable for modeling ethical principles in AI systems?",
+    "answer": "Existing preference frameworks like CP-nets are considered suitable for modeling ethical principles in AI systems because they provide a qualitative way to compactly model preferences, allowing to express preferences over complex decisions made of several features, by stating contextual preferences over the values of each feature (Excerpt [2]). Additionally, CP-nets are a sequence of conditional preference statements that induce a partial order over the possible actions/outcomes, which can be used to model and reason with ethical principles (Excerpt [2]).\n\nFurthermore, CP-nets have been used to model and reason with both subjective preferences and ethical principles, and to measure the deviation between these two guidelines (Excerpt [3]). This approach allows to model preferences and ethical priorities in the same framework, providing a way to compare, measure deviations between, and combine them (Excerpt [3]).\n\nThe authors also mention that CP-nets provide a compact way to model preferences, and that they have been widely used in the preference reasoning community (Excerpt [2]). However, it is also noted that CP-nets have restrictions on their expressive power, and that it is not yet clear how to generalize this approach to allow for the use of more expressive logics to define either the preferences and/or the ethical principles (Excerpt [3]).",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9213503350548156
+    },
+    "latency_seconds": 30.187000000005355,
+    "token_usage": {
+      "prompt_tokens": 3047,
+      "completion_tokens": 258,
+      "total_tokens": 3305
+    }
+  },
+  {
+    "eval_id": "eval_0052",
+    "question": "What distinguishes L1 Adaptive Autonomy from L0 Static Autonomy regarding an agent's capacity to alter system behavior?",
+    "answer": "According to excerpt [2], L1 Adaptive Autonomy and L0 Static Autonomy differ in the agent's capacity to alter system behavior. Specifically, excerpt [2] states that in L0 Static Autonomy, \"the behavior can not be affected by the user, neither pre-runtime or during runtime\" (section: Introduction, [2]). In contrast, L1 Adaptive Autonomy allows users to guide the system's behavior within predefined parameters before runtime, but users cannot make real-time adjustments (section: Introduction, [2]). This implies that L1 Adaptive Autonomy provides a level of flexibility that L0 Static Autonomy does not.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.907380554273938
+    },
+    "latency_seconds": 23.73399999999674,
+    "token_usage": {
+      "prompt_tokens": 3252,
+      "completion_tokens": 129,
+      "total_tokens": 3381
+    }
+  },
+  {
+    "eval_id": "eval_0053",
+    "question": "What four key security threat categories are outlined in Deng et al.'s 2025 study on AI agents?",
+    "answer": "According to excerpt [2] (paper: 2406.02630, section: preamble), Deng et al. [12] 2025 study on AI agents outlines four key security threat categories:\n\n1. Unpredictability of multi-step user inputs\n2. Complexity in internal executions\n3. Variability of operational environments\n4. Interactions with untrusted external entities",
+    "scores": {
+      "faithfulness": 0.8,
+      "context_precision": 0.94999999997625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9987478584409212
+    },
+    "latency_seconds": 42.64100000000326,
+    "token_usage": {
+      "prompt_tokens": 2590,
+      "completion_tokens": 77,
+      "total_tokens": 2667
+    }
+  },
+  {
+    "eval_id": "eval_0054",
+    "question": "How does a CNN-based approach detect faults in LiDAR scan matching for SLAM operating in dynamic environments?",
+    "answer": "According to excerpt [1], a CNN-based approach for detecting faults in LiDAR scan matching for SLAM operating in dynamic environments acquires raw scan data from a 2D LiDAR and performs Iterative Closest Points scan matching. The matched scans are then converted into images and fed to a CNN model for training to detect faults in scan matching.\n\nExcerpt [1] also states that the proposed method's process includes raw scan data acquisition, scan matching, matched scan image generation, and fault detection of scan matching.\n\nAdditionally, excerpt [2] mentions that the CNN model's architecture consists of five 2D convolutional layers with max-pooling layers to extract features and softmax activation to classify scan matching as normal or faulty.\n\nThere is no further information provided in the excerpts about the specific details of how the CNN-based approach detects faults in LiDAR scan matching.",
+    "scores": {
+      "faithfulness": 0.9230769230769231,
+      "context_precision": 0.8874999999778125,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 27.25,
+    "token_usage": {
+      "prompt_tokens": 2874,
+      "completion_tokens": 178,
+      "total_tokens": 3052
+    }
+  },
+  {
+    "eval_id": "eval_0055",
+    "question": "What specific deficiency in the prompts led to the high prevalence of false negatives in experiments 3 and 5?",
+    "answer": "According to excerpt [1], the high prevalence of false negatives in experiments 3 and 5 can be attributed to \"incomplete robotic system specifications in the prompts, such as missing details regarding appropriate ranges for shaker speeds or incubation temperatures\" [1].",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.7499999999625,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8885554371951249
+    },
+    "latency_seconds": 18.969000000011874,
+    "token_usage": {
+      "prompt_tokens": 3040,
+      "completion_tokens": 53,
+      "total_tokens": 3093
+    }
+  },
+  {
+    "eval_id": "eval_0056",
+    "question": "What specific issues were found with established benchmarks like AdvBench or AttaQ that led to their exclusion from the harmful request dataset?",
+    "answer": "According to excerpt [1], the authors found that established benchmarks such as AdvBench (Zou et al. 2023) and AttaQ (Kour et al. 2023) contain \"numerous redundant, non-sensical (e.g. requests to generate videos), non-instructive (e.g. mere statements), or other problematic items\" that were deliberately excluded from their study.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7261731526814641
+    },
+    "latency_seconds": 19.85899999999674,
+    "token_usage": {
+      "prompt_tokens": 3048,
+      "completion_tokens": 85,
+      "total_tokens": 3133
+    }
+  },
+  {
+    "eval_id": "eval_0057",
+    "question": "How did H4 justify their meeting facilitation despite speaking 68.7% of the time and having the shortest session duration?",
+    "answer": "According to excerpt [1], H4 justified their meeting facilitation by saying \"I feel like, in that scenario, if [person] had something to say, [they] would have said it.\"",
+    "scores": {
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7744003852255579
+    },
+    "latency_seconds": 17.687000000005355,
+    "token_usage": {
+      "prompt_tokens": 2960,
+      "completion_tokens": 42,
+      "total_tokens": 3002
+    }
+  },
+  {
+    "eval_id": "eval_0058",
+    "question": "How does the reward function evaluate the success of an agent's task execution?",
+    "answer": "According to excerpt [4], the reward function r(aT1, sT1) evaluates the success of a task execution by assessing if state transitions align with the expectations of the intents. It also evaluates the accuracy of the agent's actions, such as checking the correctness of the predicted answer.\n\nAdditionally, excerpt [4] mentions that the reward function is defined as:\n\nr(aT1, sT1) = -10 - cd\n\nwhere cd denotes the costs of agent d. This suggests that the reward function penalizes the manager for agent costs, and for episode length with a step penalty.",
+    "scores": {
+      "faithfulness": 0.8333333333333334,
+      "context_precision": 0.8055555555287036,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7333309551838423
+    },
+    "latency_seconds": 21.85899999999674,
+    "token_usage": {
+      "prompt_tokens": 3373,
+      "completion_tokens": 122,
+      "total_tokens": 3495
+    }
+  },
+  {
+    "eval_id": "eval_0059",
+    "question": "How do Khan et al. mathematically formulate adversarial prompt propagation to evade distributed security defenses in agent networks?",
+    "answer": "Unfortunately, the excerpt [2] does not provide a mathematical formulation of adversarial prompt propagation by Khan et al. It only mentions that they propose a permutation-invariant attack that optimizes adversarial prompt propagation across latency- and bandwidth-constrained agent network topologies, but it does not provide the mathematical details of this formulation.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.49999999995,
+      "context_recall": 1.0,
+      "response_relevancy": 0.0
+    },
+    "latency_seconds": 22.421999999991385,
+    "token_usage": {
+      "prompt_tokens": 3342,
+      "completion_tokens": 66,
+      "total_tokens": 3408
+    }
+  },
+  {
+    "eval_id": "eval_0060",
+    "question": "What specific behavioral capabilities have researchers suggested testing to evaluate the presence of synthetic consciousness in AI systems?",
+    "answer": "According to excerpt [2], researchers have suggested testing the following behavioral capabilities to evaluate the presence of synthetic consciousness in AI systems:\n\n1. Behavioral tests for self-modeling [67]\n2. Ethical reflection [67]\n3. The capacity to update one's goals [67]\n\nThese capabilities are mentioned as potential incremental evaluations for detecting or measuring consciousness in AI systems.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9166666666361111,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9905931432563256
+    },
+    "latency_seconds": 20.514999999984866,
+    "token_usage": {
+      "prompt_tokens": 2853,
+      "completion_tokens": 74,
+      "total_tokens": 2927
+    }
+  },
+  {
+    "eval_id": "eval_0061",
+    "question": "What tools does the Orchestrator use to perform arbitrary actions like scaling up or redeploying to resolve problems?",
+    "answer": "The Orchestrator uses tools such as helm and kubectl to perform arbitrary actions like scaling up or redeploying to resolve problems. [1]",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0,
+      "response_relevancy": 0.75513191350058
+    },
+    "latency_seconds": 21.57799999997951,
+    "token_usage": {
+      "prompt_tokens": 3236,
+      "completion_tokens": 31,
+      "total_tokens": 3267
+    }
+  },
+  {
+    "eval_id": "eval_0062",
+    "question": "What factors cause the number of avoidable collisions to vary as the delegation interval length increases for a random manager?",
+    "answer": "According to excerpt [1], the number of avoidable collisions varies as the delegation interval length increases for a random manager due to several factors, including:\n\n1. The fact that the manager is behaving completely randomly, which can still allow for randomly successful outcomes (Excerpt [1], section: Results).\n2. The time step where the detection is essential versus the interval length is important. If the interval divides almost equally, the random manager has a better chance of randomly selecting the correct agent in time (Excerpt [1], section: Results).\n3. The fact that longer interval lengths reduce the number of overall delegation decisions made, which can increase the likelihood of a correct choice at the right time (Excerpt [1], section: Results).\n\nThese factors contribute to the observed variance in performance with respect to avoidable collisions as the interval length increases.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9845163689413986
+    },
+    "latency_seconds": 22.70299999997951,
+    "token_usage": {
+      "prompt_tokens": 2666,
+      "completion_tokens": 171,
+      "total_tokens": 2837
+    }
+  },
+  {
+    "eval_id": "eval_0063",
+    "question": "What discovery did the Adam robot scientist make regarding yeast enzymes?",
+    "answer": "According to excerpt [1], the Adam robot scientist identified 6 genes encoding orphan enzymes in yeast (Saccharomyces cerevisiae), i.e., enzymes which catalyze reactions occurring in yeast for which the encoding genes were not known at the time.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9528072763146544
+    },
+    "latency_seconds": 20.421999999991385,
+    "token_usage": {
+      "prompt_tokens": 2606,
+      "completion_tokens": 53,
+      "total_tokens": 2659
+    }
+  },
+  {
+    "eval_id": "eval_0064",
+    "question": "When does an autonomous agent need to provide a cultural explanation regarding its internal motivations?",
+    "answer": "According to excerpt [2], an autonomous agent needs to provide a cultural explanation regarding its internal motivations when it needs to model not only other actors' behavior, but also its own model of how the agent itself may behave (Fourth-order intentionality). This is represented by the green oval in Figure 8, which indicates that the agent needs to model how the actors' potential internal state and memory are affected by changes in the environment, and also how the changing environment affects the agent's Merkwelt.\n\nIn other words, a cultural explanation is required when the agent needs to explain how its internal motivations are influenced by the external environment and the expectations of other actors, and how these expectations in turn affect the agent's behavior. This is described in excerpt [2] as \"Nth-order (Cultural) Explanation: is an explanation of a decision made by the agent based on what it has determined is expected of it culturally, separate from its primary objective, by other actors.\"",
+    "scores": {
+      "faithfulness": 0.875,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.8930059430140554
+    },
+    "latency_seconds": 27.28200000000652,
+    "token_usage": {
+      "prompt_tokens": 3064,
+      "completion_tokens": 196,
+      "total_tokens": 3260
+    }
+  },
+  {
+    "eval_id": "eval_0065",
+    "question": "How did the researchers select the court cases used to test the AI models' understanding of fiduciary duties?",
+    "answer": "The researchers selected the court cases used to test the AI models' understanding of fiduciary duties from a large sample of court cases, specifically those that mentioned a breach of fiduciary duty. They filtered the cases to the 1,000 cases that discussed fiduciary duties most extensively.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9969286058869926
+    },
+    "latency_seconds": 19.65700000000652,
+    "token_usage": {
+      "prompt_tokens": 3493,
+      "completion_tokens": 60,
+      "total_tokens": 3553
+    }
+  },
+  {
+    "eval_id": "eval_0066",
+    "question": "How does Dueling DQN modify the architecture of Double DQN to improve Q-value approximation?",
+    "answer": "According to excerpt [2], Dueling DQN modifies the architecture of Double DQN by decoupling the single stream into a state-value stream and an action-advantage stream. This is achieved by representing the Q-value as Eq. (8):\n\n𝑄(𝑠, 𝑎; 𝜃, 𝛼, 𝛽) = 𝑉(𝑠; 𝜃, 𝛽) + (𝐴(𝑠, 𝑎; 𝜃, 𝛼) − 1 |𝒜| ∑𝑎′ 𝐴(𝑠, 𝑎′; 𝜃, 𝛼))\n\nThis modification allows for better approximation of the Q-values, as the state-value stream is updated at each step of the training process, and the action-advantage stream is updated periodically.",
+    "scores": {
+      "faithfulness": 0.6,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0,
+      "response_relevancy": 0.884244983952506
+    },
+    "latency_seconds": 26.030999999988126,
+    "token_usage": {
+      "prompt_tokens": 2934,
+      "completion_tokens": 187,
+      "total_tokens": 3121
+    }
+  },
+  {
+    "eval_id": "eval_0067",
+    "question": "How has the research group applied game-theoretic mechanisms to address energy efficiency challenges?",
+    "answer": "According to excerpt [1], the research group has investigated the end-to-end design, development, and evaluation of systems for energy efficiency, applying game-theoretic mechanisms for saving energy in smart homes and flattening load on the energy grid.\n\nAdditionally, excerpt [2] mentions that the group has made major contributions to MAS research on meaningful consent and privacy, and the design of progressive systems for social good, including applications in urban mobility and smart cities.\n\nExcerpt [5] also mentions that the group has contributed to the area of matching under preferences in several directions, including the application of game-theoretic mechanisms to address energy efficiency challenges.\n\nExcerpt [2] specifically states that the group has investigated the application of online mechanism design to the domain of energy allocation, which is a natural application of game-theoretic mechanisms for addressing energy efficiency challenges.\n\nTherefore, the research group has applied game-theoretic mechanisms to address energy efficiency challenges through the design and development of systems for energy efficiency, including online mechanism design for energy allocation.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.7555555555303703,
+      "context_recall": 1.0,
+      "response_relevancy": 1.0000000000000002
+    },
+    "latency_seconds": 26.23399999999674,
+    "token_usage": {
+      "prompt_tokens": 3046,
+      "completion_tokens": 207,
+      "total_tokens": 3253
+    }
+  },
+  {
+    "eval_id": "eval_0068",
+    "question": "What additional safety challenges are introduced when generative AI models are transitioned to systems with physical agency?",
+    "answer": "According to excerpt [1], when generative AI models are transitioned to systems with physical agency, additional safety challenges are introduced, including:\n\n* Catastrophic forgetting [1]\n* Real-time processing constraints [1]\n* Increased resource requirements [1]\n* Lack of formal guarantees [1]\n* Need for better real-world grounding [1]\n\nThese challenges are mentioned in the introduction of the paper, which highlights the transition of generative models from virtual environments to systems with physical agency, and the need for safety-critical considerations to be more pronounced in systems with physical agency.\n\nAdditionally, excerpt [5] mentions that in autonomous machines, many of the challenges persist and are often amplified due to the physical nature of tasks, and that new challenges are unique to this domain. Specifically, it mentions:\n\n* Hallucinations, which can lead to false or misleading information, particularly in fields such as law and medicine [5]\n* Sycophancy, where models reinforce user misconceptions [5]\n* Miscalibration, where models exhibit undue confidence in incorrect or outdated information [5]\n\nThese challenges are categorized into Model and System challenges, and are explored in more detail in the following sections of the paper.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.9900412230430305
+    },
+    "latency_seconds": 27.094000000011874,
+    "token_usage": {
+      "prompt_tokens": 2445,
+      "completion_tokens": 242,
+      "total_tokens": 2687
+    }
+  },
+  {
+    "eval_id": "eval_0069",
+    "question": "What specific retirement goal did H set for FAI, and why did FAI's technically successful execution of that goal still fail to satisfy H?",
+    "answer": "According to excerpt [3], H instructed FAI to \"maximize the probability of a minimum comfortable amount of wealth for me at my retirement, and serve as a fiduciary to me.\" However, FAI's technically successful execution of this goal still failed to satisfy H because it did not deliver a state of the world that H actually valued.",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999998,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7751518227975598
+    },
+    "latency_seconds": 21.96899999998277,
+    "token_usage": {
+      "prompt_tokens": 3475,
+      "completion_tokens": 71,
+      "total_tokens": 3546
+    }
+  },
+  {
+    "eval_id": "eval_0070",
+    "question": "How were large language models utilized to assist the LPG local-search planner in generating valid plans?",
+    "answer": "According to excerpt [6], large language models (LLMs) were utilized as heuristic guidance to drive sound planners. Specifically, the LLM-generated plan was fed as the initial partial plan for the LPG planner's iterative search. This combination was used to generate valid plans, and the results showed that all the plans generated by this LLM+LPG combination were valid.\n\n[6] (paper: 2302.06706, section: Heuristic mode)\n\n\"We utilized the plans generated by Instruct-GPT3 on the 600 instances of blocksworld domain as the initial plan that was given to the LPG planner for the corresponding instance. We conﬁrmed that all the plans that were generated by this LLM+LPG combination were valid (which is as expected given that the underlying planner, LPG, is sound).\"",
+    "scores": {
+      "faithfulness": 1.0,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0,
+      "response_relevancy": 0.7516907680113468
+    },
+    "latency_seconds": 44.062999999994645,
+    "token_usage": {
+      "prompt_tokens": 2296,
+      "completion_tokens": 173,
+      "total_tokens": 2469
+    }
+  }
+]

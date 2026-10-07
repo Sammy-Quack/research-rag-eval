@@ -15,7 +15,7 @@ class BGEM3Embedder:
     name = "bge_m3"
     dimension = 1024
 
-    def __init__(self, device: str | None = None):
+    def __init__(self, device: str | None = None, local_files_only: bool = False):
         if device is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
         elif device == "cuda" and not torch.cuda.is_available():
@@ -26,7 +26,11 @@ class BGEM3Embedder:
         gpu_name = torch.cuda.get_device_name(0) if device == "cuda" else None
         print(f"  BGE-M3 using device: {device}" + (f" ({gpu_name})" if gpu_name else ""))
 
-        self._model = SentenceTransformer(MODEL_NAME, device=device)
+        self._model = SentenceTransformer(
+            MODEL_NAME,
+            device=device,
+            local_files_only=local_files_only,
+        )
 
     def embed_texts(self, texts: list[str]) -> list[list[float]]:
         embeddings = self._model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
