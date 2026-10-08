@@ -106,6 +106,10 @@ flowchart LR
 │   ├── retrieval/             # dense, BM25, hybrid (RRF)
 │   ├── generation/            # prompts and local Ollama client
 │   └── pipeline.py            # retrieve -> prompt -> generate, plus the no-retrieval baseline
+├── app/
+│   ├── streamlit_app.py       # local live query and evaluation dashboard
+│   ├── dashboard_only.py      # dashboard-only entry point for lightweight hosting
+│   └── requirements.txt       # minimal dashboard hosting dependencies
 ├── eval/
 │   ├── eval_set.jsonl         # 70 manually reviewed question/answer pairs
 │   ├── build_eval_set.py      # LLM drafting of candidate questions
@@ -171,6 +175,19 @@ python -m src.pipeline --mode none --query "How are autonomous agents evaluated 
 ```
 
 Expect roughly 20-40 seconds per answer on a CPU-only laptop.
+
+### Streamlit demo and dashboard
+
+With the Ollama models, corpus, and indexes set up, run the full local app:
+
+```powershell
+streamlit run app/streamlit_app.py
+```
+
+The **Ask a question** tab uses the live Ollama pipeline. The **Evaluation
+dashboard** tab reads the saved result JSONs, reports, and graphs from
+`eval/results/`; it does not need Ollama. For a dashboard-only deployment, use
+`app/dashboard_only.py` with the lightweight `app/requirements.txt`.
 
 ### Reproduce the evaluation
 
@@ -242,8 +259,8 @@ Done: ingestion, chunking (3 strategies), indexing, dense / BM25 / hybrid
 retrieval, grounded generation, the evaluation set, the Ragas evaluation of five
 configurations, unit tests and CI.
 
-Not built: the Streamlit demo and dashboard (guide in
-[`docs/STREAMLIT_GUIDE.md`](docs/STREAMLIT_GUIDE.md)).
+Built: the local Streamlit query demo and results dashboard (implementation
+guide in [`docs/STREAMLIT_GUIDE.md`](docs/STREAMLIT_GUIDE.md)).
 
 Not attempted: reranking, a second embedding model, multi-passage questions, a
 fine-tuning comparison.
